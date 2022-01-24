@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.head{
+    margin-bottom: -12%;
+}
+
+/* 베너 */
+.banner{
+    /* background-image: linear-gradient(rgba(0,0,0,0.16),transparent),url("../images/background.jpg"); */
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    height: 1180px;
+}
+
+.banner input[id*="slide"] {display:none;}
+.banner .slidewrap {width: 900px; margin: 0 auto;}
+.banner .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;border: 13px solid rgb(47,82,148);}
+.banner .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+.banner .slidelist > li > a {display:block;}
+.banner .slidelist > li > a img {width:900px; height: 600px;}
+.banner .slidelist label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:30px;cursor:pointer;}
+
+/* input에 체크되면 슬라이드 효과 */
+.banner input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.banner input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.banner input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+/* 좌,우 슬라이드 버튼 */
+.slide-control > div {display:none;}
+.banner .left {left:30px;background:url('../images/left.png') center center / 100% no-repeat;}
+.banner .right {right:30px;background:url('../images/right.png') center center / 100% no-repeat;}
+.banner input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+.banner input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+.banner input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+/* 페이징 */
+.slide-pagelist {text-align:center;padding:10px;}
+.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+.slide-pagelist > li > label {display:block;padding:5px 20px;border-radius:30px;background:rgb(228, 10, 45);margin:0px 10px;cursor:pointer;}
+.banner input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:rgb(47,82,148);}
+.banner input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:rgb(47,82,148);}
+.banner input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:rgb(47,82,148);}
+
+/* 베너 끝 */
+
+
+/* 버튼 */
+.banner #button{
+    position: relative;
+    text-align: center;
+    z-index: -10px;
+    top: 300px;
+}
+.banner #button img{
+    position: relative;
+    transition: all 0.5s;
+    background-color: #2f5294;
+    right: 350px;
+}
+
+.banner #button #예약하기{top: 60px;}
+.banner #button #추천여행지{top: 70px;}
+.banner #button #상품패키지{top: 80px;}
+
+.banner #button img:hover{
+    transform: translate(-75%, 0px);
+    background-color: rgb(228, 10, 45);
+}
+
+
+.mid{
+    white-space: nowrap;
+}
+
+.mid .i{
+    height: 1400px;
+}
+
+.mid #title{
+    font-size: 65px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
+
+#events{
+    width: 600px;
+    margin-left: 200px;
+}
+
+.mid .events1 h1{
+    position: relative;
+    color: white;
+    font-size: 90px;
+    top: -690px; 
+    margin-left: 200px;
+}
+
+
+.events2{
+    position: relative;
+    top: -970px;
+    margin-left: 560px;
+}
+
+#events_list1 img{
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    width: 350px;
+    height: 250px;
+    margin-left: 40px;
+    
+}
+
+
+
+#events_list2 li{
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    list-style: none;
+    width: 350px;
+    height: 250px;
+    margin-left: 40px;
+    background-color: white;
+    padding: 10px;
+}
+
+#events_list2 #b{
+    position: relative;
+    top: -250px;
+    left: 395px;
+}
+#events_list2 #c{
+    position: relative;
+    top: -500px;
+    left: 790px;
+}
+
+#events_list2 li h2{
+    font-size: 35px;
+   white-space: nowrap;
+}
+#events_list2 li h3{
+    padding: 10px;
+    font-weight: lighter;
+    
+}
+
+
+.bottom{
+    float: left;
+    font-size: 30px;
+    color: white;
+    height: 300px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery/jquery-3.6.0.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <!-- <script>
+        var input='';
+        input+='시군구,의료기관명,진료과수,병상수,전화번호,주소,국민안심병원 여부, 감염병전담기관 여부, 감염병전담기관 외래진료 Y여부\n';
+        input+='강원도 강릉시,강릉동인병원,21,608,033)651-6167,강원도 강릉시 강릉대로419번길 42(포남동),,,\n';
+        input+='강원도 강릉시,박정빈외과의원,1,0,033)643-0080,강원도 강릉시 경강로2109,,,\n';
+        input = input.split('\n');
+        var output='<table border="1" style="border-collapse:collapse">';
+        for(var i=0; i<input[i].length-1; i++){
+            input[i] = input[i].split(',');
+            output += '<tr>';
+            for(var j=0; j<input[i].length; j++){
+                output+='<td>'; output+= input[i][j].trim(); output+='<td>';
+            }
+            output+='<tr>';
+        }
+        output+='<table>';
+        document.body.innerHTML += output;
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(request.readyState == 4 && request.status == 200){
+                    var json = eval('('+request.responseText+')');
+                    var output = '';
+                    for(var i = 0; i< json.data.length; i++){
+                        var continent_name = json.data[i].continent_nm;
+                        var country_name = json.data[i].country_nm;
+                        var flag_url = json.data[i].flag_download_url;
+                        var map_url = json.data[i].map_download_url;
+                        output +='<div>';   output+='<h2>'+continent_name+'</h2>';
+                        output +='<h3>'+country_name+'</h3>';
+                        output +='<img src="'+flag_url+'" alt="해당 국가 이미지 없음" width="200"/>';
+                        output +='<img src="'+map_url+'" alt="해당 국가 이미지 없음" width="200" border="1"/>';
+                        output +='</div>';
+                    }
+                    document.body.innerHTML += output;
+                }
+            };   request.open("get","http://apis.data.go.kr/1262000/TravelAlarmService2/getTravelAlarmList2?serviceKey=W8z6uBeaa5coRkWfqEYwL4RG51iL8AXo7ELeRSritgu7w9yNkPdbaqbrdl6V2Qr2wPjgWUOgA9yi%2BO%2BwKK%2FPZg%3D%3D&returnType=JSON&numOfRows=10&pageNo=1", true);
+            request.send();
+        };
+    </script> -->
+
+    <!-- <script>
+        window.onload=function(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(request.readyState == 4 && request.status == 200){
+                    var parser = new DOMParser();
+                    var xml = parser.parseFromString(request.responseText,'application/xml');
+                    var banNotes = xml.getElementsByTagName('banNote');
+                    var countryNames = xml.getElementsByTagName('countryName');
+                    var imgUrls = xml.getElementsByTagName('imgUrl');
+                    for(var i=0; i<banNotes.length;i++){
+                        var banNote = banNotes[i].textContent;
+                        var countryName = countryNames[i].textContent;
+                        var imgUrl = imgUrls[i].textContent;
+                        document.body.innerHTML += '<p>'+banNote+'&nbsp&nbsp&nbsp&nbsp'+countryName;
+                        document.body.innerHTML += '<img src="'+imgUrl+'" alt="해당 국가 이미지 없음" width="100"/></p>';
+                    }
+                }
+            }
+            request.open("get","http://apis.data.go.kr/1262000/TravelBanService/getTravelBanList?serviceKey=W8z6uBeaa5coRkWfqEYwL4RG51iL8AXo7ELeRSritgu7w9yNkPdbaqbrdl6V2Qr2wPjgWUOgA9yi%2BO%2BwKK%2FPZg%3D%3D&numOfRows=10&pageNo=1&countryName=%EA%B0%80%EB%82%98&countryEnName=Ghana", true);
+            request.send();
+        };
+                    
+    </script> -->
+
+
+<!-- <script>
+    window.onload = function(){
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function(){
+                if(request.readyState == 4 && request.status == 200){
+                    var json = eval('('+request.responseText+')');
+                    var output = '';
+                    for(var i = 0; i< json.data.length; i++){
+                        var continent_eng_nm = json.data[i].continent_eng_nm;
+                        var country_nm = json.data[i].country_nm;
+                        var html_origin_cn = json.data[i].html_origin_cn;
+                        var file_download_url = json.data[i].file_download_url;
+                        output +='<div>';   output+='<h2>'+continent_eng_nm+'</h2>';
+                        output +='<h3>'+country_nm+'</h3>';
+                        output +='<img src="'+file_download_url+'" alt="해당 국가 이미지 없음" width="200"/>';
+                        output += html_origin_cn;
+                    }
+                    document.body.innerHTML += output;
+                }
+            };   request.open("get","http://apis.data.go.kr/1262000/CountryCovid19SafetyServiceNew/getCountrySafetyNewsListNew?serviceKey=W8z6uBeaa5coRkWfqEYwL4RG51iL8AXo7ELeRSritgu7w9yNkPdbaqbrdl6V2Qr2wPjgWUOgA9yi%2BO%2BwKK%2FPZg%3D%3D&returnType=JSON&numOfRows=10&pageNo=1", true);
+            request.send();
+        };
+</script> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        // $.ajax({
+        //     url:"data.html",
+        //     success: function(data){
+        //         $('body').append(data);
+        //     }
+        // });
+        $.get("data.html", function(data){
+            $('body').append(data);
+        });
+});
+</script> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        $.getJSON("http://apis.data.go.kr/1262000/TravelAlarmService2/getTravelAlarmList2?serviceKey=W8z6uBeaa5coRkWfqEYwL4RG51iL8AXo7ELeRSritgu7w9yNkPdbaqbrdl6V2Qr2wPjgWUOgA9yi%2BO%2BwKK%2FPZg%3D%3D&returnType=JSON&numOfRows=10&pageNo=20", function(info){
+            $.each(info.data, function(key,value){
+                var continent_name = value.continent_nm;
+                var country_name = value.country_nm;
+                var flag_url = value.flag_download_url;
+                var map_url = value.map_download_url;
+                var output='';
+                output +='<div>';
+                output +='<h2>'+continent_name+'</h2>';
+                output +='<h3>'+country_name+'</h3>';
+                output +='<img src="'+flag_url+'" alt="해당 국가 이미지 없음" width="200"/>';
+                output +='&nbsp; &nbsp;'
+                output +='<img src="'+map_url+'" alt="해당 국가 이미지 없음" width="200" border="1"/>';
+                output +='</div>';
+                $('body').append(output);
+            });
+        });
+    });
+</script> -->
+
+<script>
+    $(document).ready(function(){
+        $.ajax({
+            url:'http://apis.data.go.kr/1262000/TravelBanService/getTravelBanList?serviceKey=W8z6uBeaa5coRkWfqEYwL4RG51iL8AXo7ELeRSritgu7w9yNkPdbaqbrdl6V2Qr2wPjgWUOgA9yi%2BO%2BwKK%2FPZg%3D%3D&numOfRows=10&pageNo=1&countryName=%EA%B0%80%EB%82%98&countryEnName=Ghana',
+            success:function(data){
+                $(data).find('item').each(function(){
+                    var banNote = $(this).find('banNote').text();
+                    var countryName = $(this).find('countryName').text();
+                    var imgUrl = $(this).find('imgUrl').text();
+                    $('<p></p>').text(countryName+': '+banNote).appendTo('body');
+                    $('body').append('<img src="'+imgUrl+'" alt="해당 국가 이미지 없음" width="100"/>')
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

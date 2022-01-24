@@ -1,0 +1,95 @@
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url("../images/background.jpg");
+  background-size: cover;
+} 
+/* 내가 만든 부분 */
+
+.main{
+    width: 100%;
+    height: 70%; 
+    
+}
+
+.main nav {
+    float: left;
+    width: 19%;
+    height: 50vh; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+    margin: 5% 1% 5% 22%;
+    border-radius: 5%;
+  }
+  
+  /* Style the list inside the menu */
+
+  .main article {
+    float: left;
+    padding: 20px;
+    width: 34%;
+    background-color: #f1f1f1;
+    height: 80%; /* only for demonstration, should be removed */
+    margin: 5% 23% 5% 1%;
+  }
+
+  .tabmenu{ 
+    max-width:600px; 
+    margin: 0 auto; 
+    position:relative; 
+  }
+  .tabmenu li{
+    display:  inline-block;
+    width:20%; 
+    text-align:center; 
+    background :slategray;
+    line-height:40px;
+    border-radius: 5%;
+    font-size: 2vh;
+  }
+  .tabmenu label{
+    display:block;
+    width:100%; 
+    height:40px;
+    line-height:40px;
+  }
+  .btnCon>input{
+    display:none;
+  }
+  .tabCon{
+
+    text-align: left;
+    display:none; 
+    padding: 20px;
+    top:100%;
+    left: 0%;
+    position:absolute; 
+    box-sizing: border-box; 
+    border : 5px solid #f9f9f9;
+    width:100%;
+    height:35vh;
+  }
+  .tabCon div{
+    float: left;
+    width: 30%;
+    white-space: nowrap;
+    font-size: 2vh;
+  }
+  .tabCon form{
+    float: left;
+    white-space: nowrap;
+    width: 70%;
+  }
+  .tabCon form input{
+    width: 100%;
+  }
+  .tabCon form select{
+    width: 100%;
+  }
+  .tabmenu input:checked ~ label{
+    background: #f9f9f9;
+  }
+  .tabmenu input:checked ~ .tabCon{
+    display:block;
+  }

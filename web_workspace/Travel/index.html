@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="./images/logo.png" class="logo">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">항공 </a></li>
+                <li><a href="">숙소</a></li>
+            </ul>
+            <img src="./images/profile.png" class="profile-icon">
+        </nav>
+        
+        <div class="text-box">
+            <p>Go Hyun Wook</p>
+            <h1>Travel</h1>
+            <h3>Unit Project 2 - testing & QA </h3>
+            <div class="row">
+                <a href="">예약하기</a>
+                <a href="">추천 여행지 보러가기 <span>&#x27F6;</span> </a>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Animi, alias, unde saepe voluptates ab veniam</span>
+            </div>
+        </div>
+
+        
+
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com"><img src="./images/facebook.png"></a>
+            <a href="https://www.instagram.com"><img src="./images/instagram.png" ></a>
+            <a href=""><img src="./images/telegram.png" ></a>
+        </div>
+    </div>
+    
+    <br>
+
+
+    <div class="section">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <div class="slidewrap">
+            
+            <ul class="slidelist">
+                <!-- 슬라이드 영역 -->
+                <li class="slideitem">
+                    <a>
+                        <img src="./images/Paris.jpg" height="650px">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        <img src="./images/NewYork.jpg" height="650px">
+                    </a>
+                </li>
+                <li class="slideitem">
+                    <a>
+                        <img src="../images/Seoul.jpg" height="650px">
+                    </a>
+                </li class="slideitem">
+    
+                <!-- 좌,우 슬라이드 버튼 -->
+                <div class="slide-control">
+                    <div>
+                        <label for="slide03" class="left"></label>
+                        <label for="slide02" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide01" class="left"></label>
+                        <label for="slide03" class="right"></label>
+                    </div>
+                    <div>
+                        <label for="slide02" class="left"></label>
+                        <label for="slide01" class="right"></label>
+                    </div>
+                </div>
+            </ul>
+            <!-- 페이징 -->
+            <ul class="slide-pagelist">
+                <li><label for="slide01"></label></li>
+                <li><label for="slide02"></label></li>
+                <li><label for="slide03"></label></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

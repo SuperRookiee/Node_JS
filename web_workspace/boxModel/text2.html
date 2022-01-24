@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            border: 1px solid darkmagenta;
+            width: 400px;
+        }
+        th{
+            background-color: darkmagenta;
+            color: whitesmoke;
+            height: 30px;
+        }
+        td{
+            text-align: center; vertical-align: center;
+            height: 30px;
+        }
+        table, td,th{border: 2px solid darkmagenta;}
+
+        a:link{
+            opacity: 0.5;
+        }
+        a:hover{
+            opacity: 1.0;
+        }
+        img{
+            opacity: 0.2;
+        }
+        img:hover{
+            opacity: 1.0;
+        }
+
+        div.background{
+            background: url(../images/conan.jpg)repeat;
+            border: 1px solid black;
+        }
+        div.box{
+            margin: 30px;
+            background-color: #ffffff;
+            border: 2px solid blue;
+            opacity: 0.5;
+        }
+        .p0{
+            margin: 5%;
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+        }
+
+        div.tip{
+            opacity: 0.2;
+        }
+        div.ans{
+            opacity: 0.0;
+        }
+        div.tip:hover{
+            opacity: 1.0;
+            color: red;
+        }
+        div.ans:hover{
+            opacity: 1.0;
+            color: blue;
+        }
+
+        .v1{
+            visibility: hidden;
+            border: 1px dotted red;
+        }
+        .v2{
+            visibility: visible;
+            border: 1px dotted red;
+        }
+        .v3{
+            display: none;
+            border: 1px dotted red;
+        }
+
+        p strong {
+            color: blue;
+            border: 1px dotted red;
+        }
+        p.bk strong{
+            display: block;
+            color: blue;
+            border: 1px dotted red;
+        }
+
+        ul.in li{
+            display: inline;
+            background-color: yellow;
+            border: 1px solid;
+            border-color: blue;
+            margin: 3px;
+            padding: 5px;
+        }
+
+        #grad1{
+            height: 70px;
+            background: red;
+            background: linear-gradient(270deg,red,yellow);
+            /* background: radial-grdient(yellow,red); */
+
+        }
+        #grad2{
+            height: 70px;
+            background: red;
+            background: linear-gradient(red,yellow,green);
+        }
+        #grad3{
+            height: 70px;
+            background: red;
+            background: linear-gradient(red,orange,yellow,green,indigo,violet);
+        }
+        #grad4{
+            height: 70px;
+            background: red;
+            background: linear-gradient(to right,red,orange, yellow,green,blue,indigo,violet);
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>이름</th>
+            <th>이메일</th>
+        </tr>
+        <tr>
+            <td>코난</td>
+            <td>conan@aaa.com</td>
+        </tr>
+        <tr>
+            <td>장미</td>
+            <td>rose@bbb.com</td>
+        </tr>
+    </table>
+
+    <br>
+    <h3>마우스를 올리면 선명하게 보임</h3>
+    <div>
+        <a href="https://www.google.com/">Google</a>
+    </div>
+    <p></p>
+    <div>
+        <img src="../images\conan.jpg">
+    </div>
+
+    <div class="background">
+        <div class="box">
+            <p class="p0">HTML5 웹 프로그래밍</p>
+        </div>
+    </div>
+
+    <p>[문제] CSS3에서 불투명조를 적용하기 위한 속성은?</p>
+    <p>① border</p>
+    <p>② opacity</p>
+    <p>③ transparency</p>
+    <p>④ visible</p>
+    [힌트] <div class="tip">'불투명'을 뜻하는 영문 단어를 찾아보세요</div>
+    <p></p>
+    [정답] <div class="ans">정답은 ②번 입니다.</div>
+
+    <div class="v1"> /* 보이지 않도록 설정: 공간 있음*/
+        <img src="../images/conan.jpg" width="100">
+    </div>
+    <div class="v2">
+        <img src="../images/conan.jpg" width="100">
+    </div>
+    <div class="v3"> /* 보이지 않도록 설정: 공간 삭제*/
+        <img src="../images/conan.jpg" width="100">
+    </div>
+    <div class="v2">
+        <img src="../images/conan.jpg" width="100">
+    </div>
+
+    <h3>[인라인 형식]</h3>
+    <p>세계적인 IT기업에는<strong>Google</strong><strong>Apple</strong><strong>Oracle</strong>등이 있습니다.</p>
+    <h3>[블록 형식으로 변환한 후</h3>
+    <p class="bk">세계적인 IT기업에는<strong>Google</strong><strong>Apple</strong><strong>Oracle</strong>등이 있습니다.</p>
+
+    <h4>[블록 형식]</h4>
+        <ul>
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="http://www/apple.com"></a>Apple</li>
+            <li><a href="http://www/oracle.com"></a>Oracle</li>
+        </ul>
+    <h4>[인라인 형식으로 변환한 후</h4>
+        <ul class="in">
+            <li><a href="https://www.google.com/">Google</a></li>
+            <li><a href="http://www/apple.com"></a>Apple</li>
+            <li><a href="http://www/oracle.com"></a>Oracle</li>
+        </ul>
+
+    <h4>2색 선형 그레이디언트</h4>
+    <div id="grad1"></div>
+    <h4>3색 선형 그레이디언트</h4>
+    <div id="grad2"></div>
+    <h4>7색 선형 그레이디언트</h4>
+    <div id="grad3"></div>
+    <h4>2색 선형 그레이디언트</h4>
+    <div id="grad4"></div>
+    <p><strong>참고:</strong>최신 브라우저를 사용해주시기 바랍니다./p>
+</body>
+</html>

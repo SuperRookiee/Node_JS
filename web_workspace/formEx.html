@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="input.html" method="get" enctype="multipart/form-data">
+        이름 : <input type="text" name="name"/> <br>
+        학번 : <input type="text" name="number" size="10"/> <br>
+        비번 : <input type="password" name="pwd"/> <br>
+
+        성별 : <input type="radio" name="gender" value="male"/> 남성
+                <input type="radio" name="gender" value="female"/> 여성  <br>
+
+        과일 선택:
+         <input type="checkbox" name="fruits" value="apple" > 사과
+         <input type="checkbox" name="fruits" value="grape"> 포도
+         <input type="checkbox" name="fruits" value="orange"> 오렌지 <br>
+
+         가격: <input type="text" name="price" > <br>
+         수량: <input type="text" name="quantity">
+        <input type="button" value="계산" onclick="alert('10000원임')"> <br>
+
+        당신의 의견 <br>
+        <textarea name="feedback" id="3" cols="30" rows="10"></textarea>
+
+        <select name="food">
+            <option value="korean" selected>한식</option>
+            <option value="chineses" selected>중식</option>
+            <option value="western" selected>양식</option>
+        </select>
+
+        <fieldset>
+            <legend>인적사항 입력</legend>
+            이름 : <input type="text"> <br>
+            전화번호 : <input type="text"> <br>
+            주소 : <input type="text"> <br>
+        </fieldset>
+
+        <label for="male">남성</label>
+        <input type="radio" name="gender" value="male"/> <br>
+        <label for="male">여성</label>
+        <input type="radio" name="gender" value="female"/> <br>
+        <input type="submit" value="제출"> <br><br>
+
+        <input type="file" accept="image/jpg, image/gif"> <br> <br>
+
+        <input type="hidden" name="aaa" value="bbb">
+        <input type="submit" value="제출"> <br> <br>
+
+        이메일 : <input type="email" name="email" required> <br>
+        URL : <input type="url" name="url"> <br>
+        전화번호 : <input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"> <br>
+        색상: <input type="color" name="color"> <br>
+        월: <input type="month" name="month"> <br>
+        날짜: <input type="date" name="date"> <br>
+        주: <input type="week" name="week"> <br>
+        시간: <input type="time" name="time"> <br>
+        지역시간: <input type="datetime-local" name="datetime-local"> <br>
+        숫자: <input type="number" name="number" min="1" max="10" step="2"> <br>
+        범위: <input type="range" name="range" min="1" max="10" step="2"> <br>
+
+
+
+        <br>
+        <input type="reset" value="초기화">
+        <input type="submit" value="제출"> <br> <br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <!-- <script>alert('Process-1 전')</script> -->
+</head>
+<body>
+
+<!-- <button onclick="printMsg('코난',10);">학생 정보</button><br> -->
+
+    <script>
+        // var text1 = "함수 선언 전 호출";
+        // var text2 = "함수 선언 후 호출";
+        // printMsg(text1);
+        // function printMsg(msg){
+        //     document.write("함수 호출 메시지: "+msg+"<br>");
+        // }
+        // printMsg(text2);
+        
+        // function printMsg(name,age){
+        //     document.write("학생 이름: <b>"+name+"<b><br>");
+        //     document.write("학생 나이: <b>"+age+"<b><br>");
+        // }
+
+        // var text1="함수 선언 전 호출 에러"
+        // var text2="함수 선언 후 호출만 가능"
+        
+        // // printMsg(text1);
+
+        // var printMsg=function(msg){
+        //     document.write("함수 호출 메시지1:"+msg+"<br>");
+        // }
+                
+        // function printMsg(msg){
+        //     document.write("함수 호출 메시지2:"+msg+"<br>");
+        // }
+        // printMsg(text2);
+        
+        // var result;
+        // function add(name,n){
+        //     document.write(name+" 학생이 1부터" + n + "까지 덧셈 수행<br>");
+        //     var sum=0;
+        //     for(var i=1; i<=n; i++){
+        //         sum+=i;
+        //     }
+        //     return sum;
+        // }
+        // result=add('코난',10); document.write("결과: "+result+"<p/>");
+        // result=add('장미',100); document.write("결과: "+result+"<p/>");
+
+        // function add(x,y){
+        //     return x+y;
+        // }
+
+        // var calSum = add;
+        // var addUp = add;
+        // document.write("결과 값:"+calSum(5,10)+"<br>");
+        // document.write("결과 값:"+calSum(3,20)+"<br>");
+        
+        // function add(){
+        //     var sum = 1;
+        //     return sum;
+        // }
+        // function add(x){
+        //     var sum = x+1;
+        //     return sum;
+        // }
+        // function add(x,y){
+        //     var sum = x+y;
+        //     return sum;
+        // }
+
+        // var r0=add();
+        // var r1=add();
+        // var r2=add(2,3);
+        // var r3=add(4,5,6);
+        // document.write("함수 호출 인자 없음 :"+r0+"<br>");
+        // document.write("함수 호출 인자 부족 :"+r1+"<br>");
+        // document.write("정상적인 함수 호출 :"+r2+"<br>");
+        // document.write("4,5만 인자값으로 적용 :"+r3+"<br>");
+
+        // function add(x,y,z){
+        //     var sum;
+        //     if((y===undefined)&&(z===undefined)){
+        //         sum=x;
+        //     }
+        //     else if((z===undefined)){
+        //         sum=x+y;
+        //     }
+        //     else{
+        //         sum=x+y+z;
+        //     }
+        //     return sum;
+        // }
+        // var r1 = add(2);
+        // var r2 = add(2,3);
+        // var r3 = add(4,5,6);
+        // document.write("함수 호출 인자 부족 : "+ r1 + "<p>")
+        // document.write("함수 호출 인자 부족 : "+ r2 + "<p>")
+        // document.write("정상적인 함수 호출 : "+ r3 + "<p>")
+
+        // function add(){
+        //     var i, sum=0;
+        //     for(i=0; i<arguments.length; i++){
+        //         sum = sum+arguments[i];
+        //     }
+        //     document.write("수행 결과: "+sum+"<p>");
+        // }
+        // add(2,3);
+        // add(2,3,4);
+        // add(4,5,6,7,8);
+        // add(1,2,3,4,5,6,7,8,9,10);
+
+        // function sample(...items){
+        //     console.log(items);
+        // }
+        // sample(1,2);
+        // sample(1,2,3);
+        // sample(1,2,3,4);
+        
+        // var city=[];
+        // city[0]="Seoul";
+        // city[1]="Busan";
+        // city[2]="Incheon";
+        
+        // var city = ["Seoul", , "Busan", "Incheon"];
+        // function printArr(){
+        //     var i;
+        //     for(i=0; i<city.length;i++){
+        //         document.write("배열 데이터["+i+"] = "+city[i]+"<br>");
+        //     }
+        // }
+        // printArr();
+
+        // var com =[95,88,,72,68,,99,82,78,87];
+        // var getAvg;
+        // function printAvg(){
+        //     var i;
+        //     var sum=0;    var count=0;
+        //     var n=com.length;
+        //     document.write(n+"명의 점수 입력<p>");
+        //     for(i=0;i<n;i++){
+        //         if(com[i]===undefined){
+        //             continue
+        //         }
+        //         else{
+        //            sum+=com[i]; 
+        //         }
+        //         count++;
+                
+        //     }
+        //     document.write("점수를 입력한 학생:"+count+"명<p>")
+        //     document.write("총합:"+sum+"<p>")
+        //     return(sum/count);
+        // }
+        // getAvg = printAvg();
+        // document.write("평균 : <b>" + getAvg+ "<b><p>")
+
+        // var x=5;
+        // var arr=[100,"Seoul",true,x];
+        // function printArr(){
+        //     var i;
+        //     for(i=0; i<arr.length; i++){
+        //         document.write("배열 데이터["+i+"]="+arr[i]+"<br>");
+        //     }
+        // }
+        // printArr();
+
+        // var city = new Array("Seoul", "Busan", "Incheon");
+        // function printArr(){
+        //     if(city instanceof Array){
+        //         document.write("배열 객체가 생성되었습니다. <p>");
+        //         var i;
+        //         for(i=0;i<city.length;i++){
+        //             document.write("배열 데이터["+i+"] = "+city[i]+"<br>");
+        //         }
+        //     }
+        //     else{
+        //         document.write("배열 객체가 아닙니다.<br>");
+        //         document.write("데이터: "+city+ "<br>");
+        //     }
+        // }
+        // printArr();
+        // document.write("<p> city 변수 타입: "+ typeof city +"<br>");
+        // document.write("배열 객체 호가인 결과: "+ Array.isArray(city) +"<br>");
+
+        // var arrdata=[];
+        // function insertArr(){
+        //     var i=0;
+        //     for(i=0;i<=99;i++){
+        //         arrdata[i]=i+1;
+        //         document.write(arrdata[i]+" ");
+        //     }
+            // selectArr();
+        // }
+        // function selectArr(){
+        //     var i;
+        //     for(i=0;i<arrdata.length;i++){
+        //         document.write(arrdata[i]+" ");
+        //     }
+        //     addArr();
+        // }
+        // function addArr(){
+        //     var i;
+        //     var sum=0;
+        //     for(i=0;i<arrdata.length;i++){
+        //         sum+=arrdata[i];
+        //     }
+        //     document.write("<p> 배열 데이터 덧셈 연산 결과: "+sum+"<p>");
+        //     document.write("<a href='jsEx1214.html'>돌아가기</a>");
+        // }
+
+        // function delArr(){
+        //     var i;
+        //     for(i=0;i<arrdata.length;i++){
+        //         if(i%2==0){}
+        //          arrdata[i]=0;
+        //     }continue;}
+        //     selectArr();
+        //     function selectArr(){
+        //         var i;
+        //         for(i=0; i<arrdata.length; i++){
+        //             document.write(arrdata[i]+"");
+        //         }
+        //             document.write("<p>홀수 번째 데이터 초기화 완료!"+"<p>");
+        //             document.write("<a href='jsEx1214.html'>돌아가기</a>");
+        // }
+        // insertArr();
+
+        // var arrdata=[];
+        // function insertArr(){
+        //     var i=0;
+        //     for(i=0;i<=99;i++){
+        //         arrdata[i]=i+1;
+        //         document.write(arrdata[i]+" ");
+        //     }
+        //     document.write("<p>배열 크기: " +arrdata.length+"<p>");
+        // }
+        // function allDelArr(){
+        //     arrdata.length=0;
+        //     selectArr();
+        // }
+        // function selectArr(){
+        //     var i;
+        //     for(i=0;i<arrdata.length;i++){
+        //         document.write(arrdata[i]+" ");
+        //     }
+        //     document.write("<p>배열 크기: " +arrdata.length+"<p>");
+        //     document.write("<a href='jsEx1214.html'>돌아가기</a>");
+        // }
+        // insertArr();
+
+
+        // var city=["서울", "부산", "대전"];
+        // var joindata1=city.join();
+        // var joindata2=city.join('-');
+        // var joindata3=city.join(' 그리고 ');
+        // document.write("조인결과1 : "+ joindata1 + "<p>");
+        // document.write("조인결과2 : "+ joindata2 + "<p>");
+        // document.write("조인결과3 : "+ joindata3 + "<p>");
+
+        // var city01=["서울", "부산","대전"];
+        // var city02=["대구", "광주","인천"];
+        // var city03=["전주", "부여","세종"];
+
+        // var data1 = city01.concat("수원","오산");
+        // var data2 = city01.concat(city02);
+        // var data3 = city01.concat(city03,city02);
+        // document.write("결과1 : " + data1 + "<p>");
+        // document.write("결과2 : " + data2 + "<p>");
+        // document.write("결과3 : " + data3 + "<p>");
+
+        // var data=[9,8,7,6,5,4,3,2,1];
+        // document.write("배열: "+data+"<p>");
+        // var rdata = data.reverse();
+        // document.write("결과 : "+ rdata + "<p>");
+        
+        // var ndata1=[19,38,67,26,55,24,53,12,31];
+        // document.write("수치 정렬1: "+ ndata1.sort()+"<p>");
+
+        // var kdata=["서울", "부산", "구포", "대구", "대전"];
+        // var str1 =kdata.slice(0,4);
+        // var str2 =kdata.slice(2,-1);
+        // var str3 =kdata.slice(-4,-2);
+
+        // document.write(str1 +"<p>");
+        // document.write(str2 +"<p>");
+        // document.write(str3 +"<p>");
+
+        // var str4 = kdata.splice(1,2);
+        // document.write(str4 +"<p>");
+        // document.write(kdata +"<p>");   
+        // var str5 = kdata.splice(1,1, '강릉', '세종');
+        // document.write(str5 +"<p>");
+        // document.write(kdata +"<p>");  
+         
+        // var p1 = kdata.push('청주', '세종');
+        // document.write("데이터: " + p1 + "<br>");
+        // document.write("배열 데이터: " + kdata + "<br>");
+
+        // var p2 = kdata.pop();
+        // document.write("데이터: " + p2 + "<br>");
+        // document.write("배열 데이터: " + kdata + "<br>");
+
+        // var kdata=["서울", "부산"];
+
+        // var p1=kdata.unshift('청주', '세종');
+        // document.write("데이터 : " + p1 + "<br>");
+        // document.write("배열 데이터 : " + kdata + "<br>");
+        
+        // var p2=kdata.shift();
+        // document.write("데이터 : " + p2 + "<br>");
+        // document.write("배열 데이터 : " + kdata + "<br>");
+
+        // var kdata = ["서울", "부산", "청주", "대구"];
+
+        // function printArr(item,index){
+        //     document.write("배열 데이터 ["+index+"]: "+item+"<br>");
+        // }
+        // kdata.forEach(printArr);
+
+        // var data = [1,2,3,4,5,6,7,8,9,10];
+        // function mapArr(value){
+        //     return value*value;
+        // }
+        // var mapdata = data.map(mapArr);
+        // document.write(data+"<p>");
+        // document.write(mapdata+"<p>");
+
+        // document.write(data.indexOf(3)+"<br>");
+        // document.write(data.lastIndexOf(3)+"<br>");
+        // document.write(data.indexOf(60)+"<br>");
+
+        // var data={'f0':100,'f1':200,'f2':300}
+        // data['f3'] = 400;
+        // data.f4=500;
+        // document.write(data.f0+"<br>");
+        // document.write(data.f1+"<br>");
+        // document.write(data['f2']+"<br>");
+        // document.write(data['f3']+"<br>");
+        // document.write(data['f4']+"<br>");
+
+    </script>
+
+    <!-- <button type="button" onclick="insertArr()">배열 생성/조회/연산</button>
+    <button type="button" onclick="delArr()">배열의 홀수 번째 데이터 초기화</button> -->
+    <!-- <button type="button" onclick="allDelArr()">배열 데이터 삭제</button> -->
+    
+    <!-- <p id="var1"></p>
+    <p id="var2"></p>
+    <p id="var3"></p>
+    
+    <script>
+        var car ={name:'Sonanta', speed: 100, color: 'white'};
+        document.getElementById("var1").innerHTML="자동차 이름: " + car['name'];
+        document.getElementById("var2").innerHTML="자동차 속도: " + car.speed;
+        document.getElementById("var3").innerHTML="자동차 색상: " + car.color;
+    </script> -->
+
+<!-- <p id="msg1"></p>
+<p id="msg2"></p>
+<p id="msg3"></p> -->
+
+<script>
+    // var obj ={
+    //     m1: function(){
+    //         return "Hello Sonata";
+    //     },
+    //     m2: function(a){
+    //         var result = a;
+    //         return result;
+    //     },
+    //     m3: function(a,b){
+    //         var result = a+b;
+    //         return result;
+    //     }
+    // }
+
+    // var msg1 = document.getElementById("msg1");
+    // msg1.textContent=obj.m1();
+    
+    // document.getElementById("msg1").innerHTML= obj.m1();
+    // document.getElementById("msg2").innerHTML= obj.m2(100);
+    // document.getElementById("msg3").innerHTML= obj.m3(100,200);
+</script>
+
+<!-- <p id="upspeed"></p>
+<p id="downspeed"></p>
+<script>
+    var car={
+        name: 'Sonata',
+        speed: 50,
+        color: 'white',
+        speedup: function(){
+            return this.speed+10;
+        },
+        speeddown: function(){
+            var low=this.speed-10;
+            return low;
+        }
+    };
+    var upspeed = document.getElementById("upspeed");
+    upspeed.textContent='속도 증가' + car.speedup();
+    var downspeed = document.getElementById("downspeed");
+    downspeed.textContent='속도 감소' + car.speeddown();
+</script>
+
+<p id="carname"></p>
+<p id="carcolor"></p>
+<p id="carspeed"></p>
+<script>
+    var car = new Object();
+    car.name = 'Sonata';
+    car.speed = 100;
+    car.color = 'blue';
+    car.speedup=function(){
+        return this.speed+10;
+    };
+    var cname = document.getElementById("carname");
+    cname.textContent="자동차 이름: " + car.name;
+    var colname = document.getElementById("carcolor");
+    colname.textContent="자동차 이름: " + car.color;
+    var cspeed = document.getElementById("carspeed");
+    cspeed.textContent="자동차 이름: " + car.speedup();
+</script>
+
+<script>
+    function Car(name,color,speed){
+        this.name=name; this.color=color; this.speed=speed;
+        this.speedup=function(){
+            return this.speed+10;
+        };
+        this.speeddown=function(){
+            return this.speed-10;
+        };
+    }
+
+    var Hongcar = new Car('Sonata','blue', 100);
+    var Kimcar = new Car('Jeep','red', 70);
+
+    var cname = document.getElementById("carname");
+    cname.textContent="자동차 이름: " + Hongcar.name;
+    var colname = document.getElementById("carcolor");
+    colname.textContent="자동차 이름: " + Hongcar.color;
+    var cspeed = document.getElementById("carspeed");
+    cspeed.textContent="자동차 이름: " + Hongcar.speedup();
+
+    var cname = document.getElementById("carname");
+    cname.textContent="자동차 이름: " + Kimcar.name;
+    var colname = document.getElementById("carcolor");
+    colname.textContent="자동차 이름: " + Kimcar.color;
+    var cspeed = document.getElementById("carspeed");
+    cspeed.textContent="자동차 이름: " + Kimcar.speedup();
+</script> -->
+
+
+<!-- <p>[Car1]</p>
+<p id="data10"></p>
+<p id="data20"></p>
+<p id="data30"></p>
+<p>[Car2]</p>
+<p id="data11"></p>
+<p id="data21"></p>
+<p id="data31"></p>
+<p>[Car3]</p>
+<p id="data12"></p>
+<p id="data22"></p>
+<p id="data32"></p>
+
+
+<script>
+  var car=[
+    {name: 'Sonata', color:'blue', speed:100},
+    {name: 'Jeep', color:'red', speed:70},
+    {name: 'Passt', color:'white', speed:150},
+]  
+for(var i=0; i<3; i++){
+    var cname = document.getElementById("data1"+i);
+    cname.textContent="자동차 이름: " + car[i].name;
+    var colname = document.getElementById("data2"+i);
+    colname.textContent="자동차 이름: " + car[i].color;
+    var cspeed = document.getElementById("data3"+i);
+    cspeed.textContent="자동차 이름: " + car[i].speed;
+}
+
+</script> -->
+
+<!-- <p id="d1"></p>
+<p id="d2"></p>
+<p id="d3"></p>
+<p id="d4"></p>
+
+<div id="digClock"></div>
+
+<script>
+    document.getElementById("d1").innerHTML = new Date();
+    document.getElementById("d2").innerHTML = new Date(1491803527400);
+    document.getElementById("d3").innerHTML = new Date("October 15, 2018 06:18:07");
+    document.getElementById("d4").innerHTML = new Date(2018, 11, 25, 18, 30, 29);
+
+   
+    document.getElementById("d1").innerHTML=today.getFullYear()+"년";
+    
+    function digClock(){
+         var today = new Date();
+        var day = today.getMonth()+1 + "월" + today.getDate() + "일";
+        var time = today.getHours() + "시" + today.getMinutes() + "분" + today.getSeconds() + "초";
+        document.getElementById("digClock").innerHTML = day+time;
+        setTimeout('digClock()', 1000);
+    }
+    digClock();
+</script> -->
+
+<!-- <script>
+    function add(){
+        var header= document.createElement('h3');
+        var textNode = document.createTextNode('내 이름은 현욱입니다.');
+        header.appendChild(textNode);
+        document.body.appendChild(header);
+    };
+</script>
+<a href="#" onclick="add()">당신의 이름은 무엇입니까?</a> -->
+
+<!-- <ul id="coffeeList">
+    <li>americano</li>
+    <li>latte</li>
+</ul>
+
+<p>목록에 아이템 추가</p>
+<button onclick="myFunc()">추가</button>
+
+<script>
+    function myFunc(){
+        var node = document.createElement("li");
+        var textnode = document.createTextNode('cappuccino');
+        node.appendChild(textnode);
+        document.getElementById("coffeeList").appendChild(node);
+    }
+</script> -->
+
+<!-- <script>
+    function add(){
+        var img = document.createElement('img');
+        img.src='../images/conan.jpg',
+        img.width=100;  img.height=122;
+        document.body.appendChild(img);
+    };
+    function add1(){
+        var img = document.createElement('img');
+        img.setAttribute('src','../images/conan.jpg');
+        img.setAttribute('width',100);
+        img.setAttribute('height',100);
+        document.body.appendChild(img);
+    };
+</script>
+<a href="#" onclick="add1()">[이미지 추가]</a> -->
+
+<!-- <script>
+    function textstyle(){
+        document.getElementById("msg").style.color="blue";
+        document.getElementById("msg").style.fontSize="30px";
+        document.getElementById("msg").style.fontStyle="italic";
+    };
+    function texthiddent(){
+        document.getElementById("msg").style.visibility="hidden";
+    };
+    function textvisible(){
+        document.getElementById("msg").style.visibility="visible";
+    };
+</script>
+<p id="msg">문서 객체 스타일 변경하기</p>
+<input type="button" onclick="textstyle()" value="텍스트 스타일 변경">
+<input type="button" onclick="texthiddent()" value="텍스트 숨기기">
+<input type="button" onclick="textvisible()" value="텍스트 보이기"> -->
+
+<!-- <h1>Process-1</h1>
+<script>alert('Process-1과 Process-2 사이')</script>
+<h1>Process-2</h1>
+<script>alert('Process-2 후')</script> -->
+
+<!-- <script>
+    window.onload = function(){
+        document.querySelector('h1').style.backgroundColor = 'red';
+        document.querySelector('h2').style.color = 'red';
+
+        var header = document.getElementById("header");
+
+        header.style.color = 'orange'
+        header.style.background = 'red'
+        header.innerHTML = 'From JavaScript'
+    };
+</script>
+
+<h1>Process - 1 </h1>
+<h1>Process - 2 </h1>
+
+<script>
+    window.onload = function(){
+        var header = document.getElementById("header");
+
+        header.style.color = 'orange'
+        header.style.background = 'red'
+        header.innerHTML = 'From JavaScript'
+    };
+</script>
+<h1 id="header">Header</h1>
+
+<script>
+    window.onload = function(){
+        var header = document.querySelector("h1");
+
+        header.style.color = 'orange'
+        header.style.background = 'red'
+        header.innerHTML = 'From JavaScript'
+    };
+</script>
+<h1>Header</h1>
+<h1>Header</h1>
+<h1>Header</h1> -->
+
+
+<!-- <script>
+    window.onload = function(){
+        var header = document.getElementsByName("h");
+        for(var i=0; i<header.length; i++){
+            header[i].style.color = 'orange'
+            header[i].style.background = 'red'
+            header[i].innerHTML = 'From JavaScript'
+        }
+        
+    };
+</script>
+
+<h1 name="h">Header1</h1>
+<h1 name="h">Header2</h1>
+<h1 name="h">Header3</h1> -->
+
+<script>
+    window.onload = function(){
+        var output='';
+        for(var i=0; i<10;i++){
+            output +='<h1>Header-'+i+'</h1>';
+        }
+        document.body.textContent = output;
+    };
+</script>
+
+</body>
+</html>

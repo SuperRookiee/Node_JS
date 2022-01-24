@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsEx1215</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+
+        /* .important{
+            font-weight: bold;
+            font-size: large;
+        }
+        .blue{
+            color: blue;
+        } */
+
+        /* .red{
+            color: red;
+            border: 1px solid blue;
+        } */
+
+        /* div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 5px;
+            background: yellow;
+            color: black;
+        }
+        .box{
+            background: red;
+        } */
+
+        /* #slide, #panel, #flip{
+            color: black;
+            padding: 5px;
+            text-align: center;
+            background-color: #00B0F0;
+            border: solid 1px #c3c3c3;
+        }
+        #panel{
+            padding: 70px;
+            display: none;
+            background-color: #ffff00;
+        } */
+
+        /* .moving{
+            border: 1px solid #000000;
+            margin: 20px auto 0 auto;
+            text-align: right;
+            width: 550px;
+        }
+        .moving img{
+            cursor: pointer;
+            position: relative;
+        } */
+
+    </style>
+    <script src="jquery/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <!-- <script>
+        window.onload = function(){
+            var output='';
+            for(var i=0; i<10;i++){
+                output +='<h1>Header-'+i+'</h1>';
+            }
+            document.body.textContent = output;
+        };
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            var output = '';
+            for(var i=0; i<256;i++){
+                output += '<div></div>';
+            }
+            document.body.innerHTML = output;
+
+            var divs = document.querySelectorAll('div');
+            for(var i = 0; i<divs.length; i++){
+                var div = divs[i];
+            }
+            div.style.height='2px';
+            div.style.background = 'rgb('+i+','+i+','+i+')';
+        }
+    </script>
+    
+    <script>
+        window.onload = function(){
+            var image = document.getElementById('image');
+            image.src = 'http://palceimg.com/300/200/any';
+            image.width = 300;
+            image.height = 200;
+        }
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            document.body.setAttribute('data-custom','value');
+
+            var dataCustom = document.body.getAttribute('data-custom');
+            alert(dataCustom);
+        };
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            var clock = document.getElementById('clock');
+            setInterval(function(){
+                var now = new Date();
+                clock.innerHTML = now.toString();
+            },1000);
+        };
+    </script>
+    <div id="clock"></div> -->
+   
+    <!-- <script>
+        window.onload=function(event){
+            alert(event);
+        }
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            var button = document.getElementById('myLink');
+            button.onclick=function(){
+                return false;
+            };
+        };
+    </script>
+    <a id="myLink" href="http://www.naver.com">하이퍼링크</a> -->
+
+    <!-- <script>
+        function mouseoverevent(){
+            alert("내이름은 코난. 탐정이죠...");
+        }
+    </script>
+    <p onmouseover="mouseoverevent()">마우스를 여기에</p>
+
+    <input type="text" id="input1" onfocus="focuseevent()"/>
+    <script>
+        function focuseevent(){
+            document.getElementById("input1").style.backgroundColor='aqua'
+        }
+    </script>
+
+    <input type="text" id="input1" onkeydown="keydownevent()"/>
+    <script>
+        function keydownevent(){
+            document.getElementById("input1");
+            alert('키 눌림')
+        }
+    </script> -->
+
+    <!-- <script>
+        window.onload = function(){
+            var input_1 = document.querySelectorAll('input')[0];
+            var input_2 = document.querySelectorAll('input')[1];
+            input_1.onkeydown = function(){
+                if(6<=input_1.value.length){
+                    input_2.focus();
+                }
+            }
+            input_2.onkeydown = function(){
+                var event = event || window.event;
+                console.log(event);
+            }
+            if(event.keyCode == 8 && input_2.value.length == 0){
+                input_1.focus();
+            }
+        }
+    </script>
+
+    <input type="text" maxlength="6"/>
+    <span></span>
+    <input type="text" maxlength="7"/> -->
+    
+    <!-- <script>
+        $(document).ready(function(){
+            $('h1').css('color','red');
+            $('h1').css('background','black');
+        });
+        $(document).ready(function(){
+           var src = $('script').attr('src');
+           alert(src);
+        });
+        $(document).ready(function(){
+           $('img').attr('alt', '속성 지정 연습')
+           $('img').attr('src', )
+           $('img').attr('width', '100')
+        });
+        $(document).ready(function(){
+            $('img').attr({
+                alt: '속성 지정 연습',
+                src: '../images/conan.jpg',
+                width: 100
+            });
+        });
+        
+        $(document).ready(function(){
+            $('img').attr({
+            
+                alt: '속성 지정 연습',
+                src: function (index){
+                    var size = (index+1)*100;
+                    return 'http://placehold.it/'+size+'x100';
+                }
+            });
+        });
+    </script>
+ -->
+    <!-- <h1>Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+    <img>
+    <img>
+    <img> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            var output ='';
+            for(var i=0; i<256; i++){
+                output +='<div></div>';
+            }
+            document.body.innerHTML = output;
+
+            $('div').css({
+                height:2,
+                backgroundColor: function(i){
+                    return 'rgb('+i+','+i+','+i+')';
+                }
+            });
+        });
+    </script> -->
+
+    <!-- <script>
+         $(document).ready(function(){
+             $('button').click(function(){
+                 $('p').hide();
+             });
+         });
+    </script>
+    <p>메시지: 내이름은 코난, 탐정이죠.</p>
+    <button>메시지 삭제</button> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("button.hide").click(function(){
+                $("p").hide();
+            });
+            $("button.show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+    <p>문서 준비 이벤트에는 여러 다중 이벤트를 정의할 수 있음</p>
+    <button class="hide">메시지 삭제</button> 
+    <button  class="show">메시지 보기</button> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("p.ans11").hide();
+            $("p.ans22").hide();
+
+            $("button.ans1").click(function(){
+                $("p.ans11").show();
+            });
+            $("button.ans2").click(function(){
+                $("p.ans22").show();
+            });
+        });
+    </script>
+    <h1 class="1">질문1: 대한민국의 수도는?</h1>
+    <button class="ans1" style="border: none;">[정답보기]</button>
+    <p class="ans11">서울</p>
+
+
+    <h1 class="2">질문2: 대한민국의 국보1호는?</h1>
+    <button class="ans2" style="border: none;">[정답보기]</button>
+    <p class="ans22">숭례문</p> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#box').css({
+                width:100,
+                height:100,
+                background:'orange'
+            }).on('click',function(){
+                $(this).css('background','red');
+            }).on('mouseenter',function(){
+                $(this).css('background','blue');
+            }).on('mouseleave',function(){
+                $(this).css('background','orange');
+            });
+        });
+    </script>
+     
+     <div id="box"></div> -->
+
+    <!-- <script>
+        var n=0;
+        $(document).ready(function(){
+            $('div.out').mouseenter(function(){
+                $("p:first", this).text("마우스 포인트 들어옴");
+                $("p:last", this).text(++n);
+            });
+            $('div.out').mouseleave(function(){
+                $("p:first", this).text("마우스 포인트 나감");
+                $("p:last", this).text("최종 횟수: "+ ++n);
+            });
+        });
+    </script>
+    <div class="out" style="width: 400px; height: 200px; background-color: yellow; text-align: center; border: 1px solid black;">
+        <p>마우스 이벤트 알아보기</p>
+        <p>0</p>
+    </div> -->
+
+    <!-- <script>
+         $(document).ready(function(){
+             $("button.add").click(function(){
+                 $("h1,h2,p").addClass("blue");
+                 $("div").addClass("important");
+             });
+             $("button.remove").click(function(){
+                 $("h1,h2,p").removeClass("blue");
+                 $("div").removeClass("important");
+             });
+         });
+    </script>
+    <h1>HTML5</h1>
+    <h2>CSS3</h2>
+    <p>자바스크립트</p>
+    <div>제이쿼리</div>
+    <br>
+    <button class="add">CSS 적용</button>
+    <button class="remove">CSS 적용 해제</button> -->
+    
+    <!-- <script>
+         $(document).ready(function(){
+             $("button").click(function(){
+                $("h1,h2,p").toggleClass("red");
+             });
+         });
+    </script>
+    <h1>HTML5</h1>
+    <h2>CSS3</h2>
+    <p>자바스크립트</p>
+    <div>제이쿼리</div>
+    <br>
+    <button class="remove">CSS 적용 해제</button> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("p").css({"background-color": "yellow", "font-size": "200%", "color":"black"});
+             });
+        });
+    </script>
+
+    <p>코난</p>
+    <div>010-1111-1111</div>
+    <p>장미</p>
+    <div>010-2222-2222</div>
+    <br><br>
+    <button>이름 강조</button> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            var xWidth=100;
+            var yHeight=100;
+            $("div").click(function(){
+                $(this).width(xWidth).addClass("box");
+                $(this).height(yHeight).addClass("box");
+                xWidth = xWidth-10
+                yHeight = yHeight-10
+            });
+        });
+    </script>
+
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div> -->
+<!-- 
+    <script>
+        $(document).ready(function(){
+            $('h1').hover(function(){
+                $(this).css({
+                    background: 'red',
+                    color: 'black'
+                });
+            }, function(){
+                $(this).css({
+                    background: '',
+                    color: ''
+                });
+            });
+        });
+    </script>
+    <h1>Click</h1> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('button.b1').click(function(){
+                $("img").animate({
+                    width:'100px'
+                });
+            });
+            $('button.b2').click(function(){
+                $("img").animate({
+                    width:'200px'
+                });
+            });
+            $('button.b3').click(function(){
+                $("img").animate({
+                    width:'300px'
+                });
+            });
+        });
+    </script>
+    
+    <button class="b1"><img src="../images/conan.jpg"></button>
+    <button class="b2"><img src="../images/conan.jpg"></button>
+    <button class="b3"><img src="../images/conan.jpg"></button> -->
+    
+    <!-- <script>
+        $(document).ready(function(){
+            $('button.move').click(function(){
+                $("img").animate({
+                    left: '300px',
+                    height:'300px',
+                    width: '350px'
+                });
+            });
+            $('button.init').click(function(){
+                $("img").animate({
+                    left: '0px',
+                    height:'100px',
+                    width: '120px'
+                });
+            });
+        });
+    </script>
+    
+    <button class="move">확대</button>
+    <button class="init">축소</button>
+    <p></p>
+    <img name="pic1" src="../images/conan.jpg" width="130" height="100" style="position: relative;"> -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('#hide').click(function(){
+                $("img").hide("slow");
+            });
+            $('#show').click(function(){
+                $("img").show("fast");
+            });
+            $('#toggle').click(function(){
+                $("img").toggle(3000);
+            });
+        });
+    </script>
+
+    <img  src="../images/conan.jpg"> <br>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button> -->
+
+    
+    <!-- <script>
+        $(document).ready(function(){
+            $('#out').click(function(){
+                $("img").fadeOut("slow");
+            });
+            $('#in').click(function(){
+                $("img").fadeIn("slow");
+            });
+            $('#toggle').click(function(){
+                $("img").fadeToggle("slow");
+            });
+            $('#to50').click(function(){
+                $("img").fadeTo("slow",0.5);
+            });
+            $('#to10').click(function(){
+                $("img").fadeTo("slow",0.1);
+            });
+            $('#to100').click(function(){
+                $("img").fadeTo("slow",1.0);
+            });
+        });
+    </script>
+
+    <button id="out">fadeOut</button>
+    <button id="in">fadeIn</button>
+    <button id="toggle">fadeToggle</button>
+    <button id="to50">opacity 50%</button>
+    <button id="to10"> opacity 10%</button>
+    <button id="to100"> opacity 100%</button>
+    <br>
+    <img src="../images/conan.jpg">  -->
+
+    <!-- <script>
+        $(document).ready(function(){
+            // $('#panel').click(function(){
+            //     $("#panel").slideUp("fast");
+            // });
+            // $('#slide').click(function(){
+            //     $("#panel").slideDown(5000);
+            // });
+            
+            // $('#filp').click(function(){
+            //     $("#panel").slideToggle("slow");
+            // });
+            // $('#stop').click(function(){
+            //     $("#panel").stop();
+            // });
+            $('#slide').click(function(){
+                $("#panel").slideDown(2000).slideUp(5000).fadeTo("slow",0.3);
+            });
+        });
+
+    </script>
+
+    <div id="slide">[오늘의 공지사항]</div>
+    <div id="panel">jQuery 애니메이션<br>함 해봐요</div>
+    <div id="flip">Toggle slide</div>
+    <p></p>
+    <button id="stop">Stop sliding</button> -->
+
+    <!-- <script>
+        function move(obj, time){
+            $(obj).stop.animate({
+                left: -350,
+                top: 0
+            }, time);
+        }
+        function back(css){
+            $(css).stop.animate({
+                left: 0,
+                top: 0
+            });
+        }
+    </script>
+
+    <div class="init">
+        <button type="button" onclick="back('.moving img')">초기 상태</button>
+    </div>
+    <div class="moving">
+        <img src="../images/conan.jpg" onclick="move(this,6000)"><br>
+        <img src="../images/conan.jpg" onclick="move(this,3000)"><br>
+        <img src="../images/conan.jpg" onclick="move(this,1000)"><br>
+    </div> -->
+
+    <!-- <script>
+         $(document).ready(function(){
+            for(var i=0; i<5; i++){
+                $('<h1>Create Document Object +'+i+'<h1>').css({
+                    backgroundColor: 'black',
+                    color: 'red'
+                }).appendTo('body');
+            } 
+         });
+    </script>
+
+    <script>
+         $(document).ready(function(){
+            for(var i=0; i<5; i++){
+                var $dynamic = $('<h1>Create Document Object +'+i+'<h1>').css({
+                    backgroundColor: 'black',
+                    color: 'red'
+                });
+                $('body').append($dynamic);
+            } 
+         });
+    </script> -->
+
+    <!-- <script>
+         $(document).ready(function(){
+            var content=[
+                {name:'코난',address:'미란이네'},
+                {name:'장미',address:'브라운박사네'}
+            ];
+            $('div').append(function(index){
+                var item=content[index];
+                var output='';
+                debugger;
+                output+='<h1>'+item.name+'</h1>';
+                output+='<h2>'+item.address+'</h2>';
+                return output;
+            });
+         });
+    </script> -->
+
+    <script>
+        $(document).ready(function(){
+            $('img').css('width',250);
+            setInterval(function(){
+                $('img').first().appendTo('body');
+            },2000);
+        });
+    </script>
+
+    <img src="../images/conan.jpg" >
+    <img src="../images//coffeshop.png" >
+    <img src="../images/아메리카노.png" >
+
+
+
+</body>
+</html>

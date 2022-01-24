@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./myMovieCss.css" rel="stylesheet" type="text/css"/>
+    <script src="jquery/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <hgroup id="title">
+        <h1 data-name="information">Information</h1>
+        <h1 data-name="character">Character</h1>
+        <h1 data-name="multimedia">Multimedia</h1>
+    </hgroup>
+    <section id="container">
+
+        <div id="main" data-name="main" class="active">
+            <img src="images/middleForeground.jpg" width="100%"/>
+        </div>
+        <div id="information" data-name="information">
+            <img src="images/Poster.jpg" width="35%"/>
+            <div class="description">
+                <p style="color: white; font-weight: bold;">"어벤져스:엔드게임"에서 탈출에 성공한 '로키'가 세상의 시간을 어지럽힌 죄로 TVA에 체포된 후, 살기 위해 또 다른 시간 속 '로키'를 잡아야 하는 미션을 받으며 벌어지는 이야기. "어벤져스:엔드게임"이후 벌어지는 일을 그리는 마블 스튜디오의 새 시리즈, "로키"에서 변덕스러운 악당, 로키(톰 히들스턴)가 장난의 신 역할을 다시 시작한다. 케이트 헤론이 감독을 맡았으며, 수석 작가는 마이클 월드론이다.</p>
+            </div>
+        </div>
+
+        <div id="character" data-name="character">
+            <a href="#">Left Button</a> <a href="#">Right Button</a>
+            <article class="show">
+                <h1>로키</h1>
+                <img src="images/Loki.jpg" height="360px">
+                <p>TVA 신입요원 <br> "어벤져스: 엔드게임"에서 2023년의 어벤져스가 2012년에 개입해서 창조된 멀티버스의 로키</p>
+            </article>
+            <article>
+                <h1>실비</h1>
+                <img src="images/Sylivie.jpg" height="360px">
+                <p>평행세계의 로키. 일명 변종 혹은 레이디 로키 <br> TVA의 비밀을 쫓는 또다른 로키 </p>
+            </article>
+            <article>
+                <h1>모비어스</h1>
+                <img src="images/Mobius.jpg"  height="360px">
+                <p>TVA의 최고의 수사관이자 고위 관리자</p>
+            </article>
+            <article>
+                <h1>계속 존재하는 자</h1>
+                <img src="images/He-Who-Remains.jpg" height="360px">
+                <p>시간 정복자 <br>31세기에 살던 과학자</p>
+            </article>
+            
+
+        </div>
+
+        <div id="multimedia" data-name="multimedia">
+            <video src="videos/Marvel Studios' Loki  Official Trailer Disney.mp4" width="940" height="480" controls="controls"></video>
+        </div>
+
+    </section>
+    <nav id="main_navigation">
+        <ul>
+            <li><a href="#" data-target="information">Movie Info</a></li>
+            <li><a href="#" data-target="character">Character</a></li>
+            <li><a href="#" data-target="multimedia">Multimedia</a></li>
+            <li><a href="#">Download</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        $(document).ready(function(){
+            //네비게이션 버튼 클릭
+            $('#main_navigation a').click(function(){
+                var target = $(this).attr('data-target');
+                alert(target);
+                $(':not([data-name='+target+']').removeClass('active');
+                $('[data-name='+target+']').addClass('active');
+            });
+            //캐릭터 이동 버튼
+            var currentPosition = 1;
+            $('#character>a:nth-child(1)').click(function(){
+                currentPosition -=1;
+                if(currentPosition<1){
+                    currentPosition=4
+                }
+                $('article').removeClass('show')
+                $('article:nth-of-type('+currentPosition+')').addClass('show');
+            });
+            $('#character>a:nth-child(2)').click(function(){
+                currentPosition +=1;
+                if(currentPosition>4){
+                    currentPosition=1
+                }
+                $('article').removeClass('show')
+                $('article:nth-of-type('+currentPosition+')').addClass('show');
+            });
+
+        });
+    </script>
+
+</body>
+</html>

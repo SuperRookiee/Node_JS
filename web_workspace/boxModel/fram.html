@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: consolas;}
+        h3.none{border-style: none;}
+        h3.hidden{border-style: hidden;}
+        h3.dotted{border-style: dotted;}
+        h3.dashed{border-style: dashed;}
+        h3.solid{border-style: solid;}
+        h3.double{border-style: double;}
+        h3.groove{border-style: groove;}
+        h3.ridge{border-style: ridge;}
+        h3.inset{border-style: inset;}
+        h3.outset{border-style: outset;}
+        h3.mix{border-style: dotted dashed solid double;}
+
+        .bt1{
+            background-color: aqua; color: red;
+            margin-bottom: 15px; padding-left: 50px;
+            border-style: dotted; border-width: thick;
+            border-color: green;
+        }
+        .bt2{
+            background-color: silver; color: green;
+            margin: 20px; padding: 5px, 10px;
+            border-style: solid; border-width: 1px 3px 5px 3px;
+            border-color: navy,red,fuchsia,black;
+        }
+        .bt3{
+            background-color: gray; color: purple;
+            margin: 50px 15px 20px; padding: 20px;
+            border-style: dashed double; border-width: 5px 0px;
+            border-color: red;
+        }
+        .bt4{
+            border-top: 5px solid red;
+            border-bottom: 5px solid red;
+        }
+
+        .br1{
+            background-color: lime; color: red;
+             border-style: solid; border-width: thick;
+            border-color: green;
+            border-radius: 30%;
+        }
+        .br2{
+            background-color: maroon; color: yellow;
+             border-style: dotted; border-width: 2px;
+            border-color: white;
+            border-radius: 15px 35px;
+        }
+        .br3{
+            background-color: teal; color: aqua;
+             border-style: dashed; border-width: 5px;
+            border-color: red;
+            border-radius: 15px 15px 25px 25px;
+        }
+        .br4{
+            border: 3px solid red;
+            border-top-left-radius: 30px;
+        }
+
+        .boxshadow1{
+            background-color: yellow;
+            border: 5px solid blue;
+            box-shadow: 10px 0 teal;
+        }
+        .boxshadow2{
+            background-color: orange;
+            border: 5px solid red;
+            box-shadow: 20px 50px red;
+        }
+        .boxshadow3{
+            background-color: silver;
+            border: 5px solid black;
+            box-shadow: 20px 30px -20px teal;
+        }
+        .boxshadow4{
+            background-color: lime;
+            border: 5px solid olive;
+            box-shadow: 10px 0px 10px teal;
+        }
+
+        div{
+            width: 220px; height: 50px; padding: 10px; margin: 30px;
+        }
+        #bs1{
+            border: 1px solid rgba(102, 185, 255, 0.4);
+            box-shadow: 0px 20px 10px rgba(102, 185, 255, 0.4);
+        }
+        #bs2{
+            border: 1px solid black;
+
+            box-shadow: 10px 10px #BCE55C, 20px 20px #CEF279, 30PX 30PX #E4F7BA;
+        }
+
+        img{
+            padding: 20px; margin: 20px;
+        }
+        .shadow1{
+            /* Bottom right corner */
+            box-shadow: 5px 5px 10px #000;
+        }
+        .shadow2{
+            /* Up right corner */
+            box-shadow: 5px -5px 10px #000;
+        }
+
+    </style>
+</head>
+<body>
+    <h3 class="none"> none</h3>
+    <h3 class="hidden"> hidden</h3>
+    <h3 class="dotted">dotted </h3>
+    <h3 class="dashed">dashed </h3>
+    <h3 class="solid">solid </h3>
+    <h3 class="double"> double</h3>
+    <h3 class="groove"> groove</h3>
+    <h3 class="ridge">ridge </h3>
+    <h3 class="inset"> inset</h3>
+    <h3 class="outset"> outset</h3>
+    <h3 class="mix">mix </h3>
+
+    <p class="bt1">박스 테두리 지정 - 1 </p>
+    <p class="bt2">박스 테두리 지정 - 2</p>
+    <p class="bt3">박스 테두리 지정 - 3</p>
+    <p class="bt4">박스 상하좌우 테두리는 border-top, border-right,border-bottom, border-left라는 속성을 이용해 지정할 수 있음</p>
+
+    <h1 class="br1">둥근 모서리 스타일링 예제1</h1>
+    <h1 class="br2">둥근 모서리 스타일링 예제2</h1>
+    <h1 class="br3">둥근 모서리 스타일링 예제3</h1>
+    <h1 class="br4">둥근 모서리 스타일링 예제4</h1>
+    
+    <h1 class="boxshadow1">박스 그림자 스타일링 예제1</h1>
+    <h1 class="boxshadow2">박스 그림자 스타일링 예제2</h1>
+    <h1 class="boxshadow3">박스 그림자 스타일링 예제3</h1>
+    <h1 class="boxshadow4">박스 그림자 스타일링 예제4</h1>
+
+    <div id="bs1">
+        <h3>박스 그림자 특수 효과1</h3>
+    </div>
+    <div id="bs2">
+        <h3>박스 그림자 특수 효과2</h3>
+    </div>
+
+    <img src="../images\아메리카노.png" class="shadow1" width="100">
+    <img src="../images\카페라떼.png" class="shadow2" width="100">
+
+</body>
+</html>

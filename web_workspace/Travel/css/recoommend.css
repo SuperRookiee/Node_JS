@@ -1,0 +1,62 @@
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url("../images/background.jpg");
+    background-size: cover;
+} 
+
+section{
+    width: 100%;
+    height: 70%;  
+}
+
+section nav {
+    float: left;
+    width: 19%;
+    height: 25vh; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+    margin: 5% 1% 5% 15%;
+    border-radius: 5%;
+  }
+  section nav div{
+      margin-bottom: 7%;
+  }
+  section nav div input{
+        width: 100%;
+  }
+  
+  /* Style the list inside the menu */
+
+  section article {
+    float: left;
+    padding: 20px;
+    width: 34%;
+    background-color: #f1f1f1;
+    height: 80%; /* only for demonstration, should be removed */
+    margin: 5% 15% 5% 1%;
+  }
+  .tabCon{
+    padding: 20px;
+    box-sizing: border-box; 
+    border : 5px solid #f9f9f9;
+    width:100%;
+    height:20vh;
+  }
+  
+  .tabCon div{
+      float: left;
+      width: 30%;
+  }
+  .tabCon form{
+      float: left;
+      width: 70%;
+  }
+
+  .tabCon form input{
+      width: 100%;
+  }
+  .tabCon form select{
+      width: 100%;
+  }

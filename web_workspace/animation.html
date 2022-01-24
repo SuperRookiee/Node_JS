@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 200px;
+            height: 200px;
+            border: 1px dotted black;
+            background-color: lightgreen;
+        } */
+        /* #div#box */
+
+        /* div#box2{
+            transform: translate(100px, 50px);
+        }
+
+        div#box3{
+            transform: rotate(45deg);
+        }
+        div#box4{
+            transform: rotate(-90deg);
+        }
+
+        
+        div#box5{
+            transform: scale(0.5,0.5);
+        }
+        div#box6{
+            transform: scale(2,1.5);
+        }
+        div#box7{
+            transform: skewX(50deg);
+        }
+
+        .c1:hover{
+            transform-origin: 50% 50% 0px;
+            transform: translate(0px,0px) rotate(-45deg) scale(0.7);
+            background: green;
+        }
+        div:hover{
+            width: 300px;
+        }
+
+        div{
+            margin: 50px;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            border: 1px solid red;
+            transition: width 3s, height 3s, border 3s, transform 3s;
+        }
+        
+        div:hover{
+            width: 200px;
+            height: 200px;
+            border: 3px solid blue;
+            transform: rotate(360deg);
+        } */
+
+        /* div{
+            width: 200px;
+            height: 200px;
+            border: 1px dotted black;
+            background: orange;
+            transition-property: width; background: color;
+            transition-duration: 5s;
+        }
+
+        div:hover{
+            width: 300px;
+            background: blue;
+            color: white;
+        } */
+
+        /* div{
+            width: 100px;
+            height: 50px;
+            background: crimson;
+            color: yellow;
+            border: 1px solid black;
+            transition: width 3s;
+            transition-duration: 5s;
+            transition-delay: 3s;
+        }
+        #div1{transition-timing-function: linear;}
+        #div2{transition-timing-function: ease;}
+        #div3{transition-timing-function: ease-in;}
+        #div4{transition-timing-function: ease-out;}
+        #div5{transition-timing-function: ease-in-out;}
+        #div6{transition-timing-function: cubic-bezier(0.1, 0.0, 0.1, 1.0);}
+        
+        div:hover{
+            width: 400px;
+        }
+        div:hover{
+            transform: rotate(180deg);
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+        } */
+        /* div{
+            position: absolute;
+            left: 0px;
+            width: 80px;
+            height: 50px;
+            background: #ff8080;
+            border: 1px solid red;
+            transition-property: width background;
+            transition-duration: 2s;
+            line-height: 50px;
+        }
+        div:hover{
+            width: 200px;
+            transition-timing-function: linear;
+            background: #ff0000;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        } */
+
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: boxmove 5s linear infinite alternate;
+        }
+        /* @keyframes boxmove{
+            from{left: 0px;}
+            to{left: 300px;}
+        } */
+        #box1{
+            animation-delay: 3s;
+            animation-direction: normal;
+            animation-iteration-count: 2;
+            animation-timing-function: ease;
+        }
+        #box2{
+            animation-delay: 5s;
+            animation-direction: alternate;
+            animation-iteration-count: 5;
+            animation-timing-function: linear;
+
+        }
+        div:hover{
+            animation-play-state:  paused;
+        }
+
+        div{
+            width: 100px; height: 100px;
+            position: absolute; animation-duration: 5 s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+        #div1{
+            background-color: blue;
+            animation-direction: normal;
+            animation-name: L-box;
+        }
+        #div2{
+            background-color: yellow;
+            animation-direction: alternate;
+            animation-name: R-box;
+        }
+
+        @keyframes L-box{
+            0%{left: 0px;}
+            50%{left: 300px;}
+            100%{left: 300px;}
+        }
+
+        div{
+            width: 100px; height: 100px;
+            background: red;
+            position: relative;
+            animation: colorbox 5s infinite;
+            animation-duration: alternate;
+        }
+
+        @keyframes colorbox {
+            from{ background: red; left: 0px; top: 0px;}
+            25%{ background: orange; left: 300px; top: 0px;}
+            50%{ background: yellow; left: 300px; top: 300px;}
+            75%{ background: green; left: 0px; top: 300px;}
+            to{ background: green; left: 0px; top: 0;}
+        }
+
+        @keyframes bounce {
+            from, to{
+                bottom: 0px;
+                animation-timing-function: ease-out;
+            }
+            50%{
+                bottom: 200px;
+                animation-timing-function: ease-in;
+            }
+        }
+        div{
+            width: 20px; height: 20px;
+            position: absolute;
+            border-radius: 10px;
+            animation-name: bounce;
+            animation-iteration-count: infinite;
+        }
+        #b1{
+            left: 10px;
+            background: red;
+            animation-duration: 5s;
+        }
+        #b2{
+            left: 50px;
+            background: blue;
+            animation-duration: 10s;
+        }
+        #b3{
+            left: 90px;
+            background: green;
+            animation-duration: 3s;
+        }
+        #b4{
+            left: 130px;
+            background: silver;
+            animation-duration: 8s;
+        }
+        #b5{
+            left: 170px;
+            background: black;
+            animation-duration: 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id="box1">박스 1</div>
+    <div id="box2">박스 2</div>
+    <br>
+    <div id="box3">박스 1 (45deg)</div>
+    <div id="box4">박스 2 (-90deg)</div>
+    <br>
+    <div id="box5">박스1 (0.5배 축소)</div>
+    <div id="box6">박스2 (가로 2배 세로 1.5배 확대)</div>
+    <br>
+    <div id="box7">박스1</div>
+
+    <div>
+        <div class="c1">박스 안에 마우스를 올리면 무엇이 보일까요?</div>
+    </div>
+
+    <div>마우스를 올리면 박스가 늘어납니다.</div>
+    <br>
+    <div>마우스를 올리면 박스가 회전하면서 커집니다.</div>
+    <br>
+    <div>마우스를 올리면 여러 속성이 변합니다.</div>
+    <br>
+    <div>색상이 10초 동안 서서히 변합니다.</div> -->
+
+    <!-- <div id="div1" style="top: 100px">linaer</div>
+    <div id="div2" style="top: 150px">ease</div>
+    <div id="div3" style="top: 200px">ease-in</div>
+    <div id="div4" style="top: 250px">ease-out</div>
+    <div id="div5" style="top: 300px">ease-in-out</div>
+    <div id="div6" style="top: 350px">cubic-bezier</div> -->
+    
+    <!-- <div style="top: 50px"><a href="#" target="new">HOME</a></div>
+    <div style="top: 100px"><a href="#" target="new">ABOUT </a></div>
+    <div style="top: 150px"><a href="#" target="new">NEWS </a></div>
+    <div style="top: 200px"><a href="#" target="new">STUDY </a></div>
+    <div style="top: 250px"><a href="#" target="new">CONTACT </a></div> -->
+
+    <!-- <div>애니메시션 박스</div> -->
+    <!-- <div id="box1">애니메이션 박스1</div>
+    <div id="box2">애니메이션 박스2</div>
+    <p><strong>참고:</strong>IE9이하 혹은 낮은 버전에서는 지원하지 않습니다.</p> -->
+
+    <!-- <div id="div1">왼쪽 박스</div>
+    <div id="div2">오른쪽 박스</div> -->
+
+    <div id="b1"></div>
+    <div id="b2"></div>
+    <div id="b3"></div>
+    <div id="b4"></div>
+    <div id="b5"></div>
+</html>

@@ -1,0 +1,307 @@
+
+/* header */
+*{
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.head {
+	position: relative;
+	z-index: 10000;
+	height: 15vh;
+	width: 100%;
+
+	/* +이미지 배너 추가 가능 */
+
+	/* background: url("../images/background.jpg");
+    background-size: cover;
+	background-position: center; */
+}
+header {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 500ms;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.head nav {
+    margin: 0 auto;
+}
+.head nav ul li{
+    display: inline-block;
+    white-space: nowrap;
+}
+nav ul li #a{
+    margin: 0 50px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 1px;
+}
+nav ul li #a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    transition: width 0.3s;
+}
+nav ul li #a:hover::after{
+    width: 80%;
+}
+
+.logo {
+    margin: 0 100px;
+	flex: 1;
+	font-size: 100px;
+	font-family: sans-serif;
+    text-align: center;
+	color: #fff;
+    text-decoration: none;
+}
+
+
+.bgc {
+	background: #626262;
+	padding: 10px;
+}
+.bgc .logo {
+	font-size: 60px;
+	color: black; 
+}
+.bgc nav #a {
+	color: #222;
+}
+
+.page h1 {
+	padding: 30px;
+	font-size: 40px;
+}
+.page p {
+	padding: 20px;
+	line-height: 1.8em;
+	font-size: 30px;
+}
+@media (max-width: 769px){
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	nav {
+		padding: 15px;
+		margin: 0px;
+	}
+}
+/* header 끝 */
+
+/* =================================================================== */
+/*바디 시작*/
+body{
+    background:url("../images/background.jpg") ;
+    background-size: cover;
+    background-attachment: fixed; 
+    background-position: center;
+}
+
+.main{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+} 
+.search {
+    margin-top: 2%;
+    text-align: center;
+}
+
+.search1{
+    width: 50%;
+    margin: 0 25% 0 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    font-size: 100px;
+    color: transparent;
+    background: url("../images/back.png");
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    -webkit-text-stroke: 2px rgb(67, 113, 197);
+    -webkit-background-clip: text;
+    font-family: 'Yellowtail', cursive;
+}
+@keyframes back{
+    100%{
+        background-position: 1000px 0;
+    }
+}
+
+
+.search_input{
+    width: 90%;
+    height: 50px;
+    font-size: 18px;
+    color: #504f4f;
+    background-color: #efefef;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 100px;
+    margin-right: -50px;
+    transition: all 0.2s;
+}
+.search_input:focus{
+    outline: none;
+    width: 100%;
+    background-color: #efefef;
+}
+.search_input::-webkit-input-placeholder{
+    font-size: 18px;
+    color:#ccc;
+}
+.search_btn{
+    border: none;
+    background-color: #efefef;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.search_btn:focus{
+    outline: none;
+}
+
+.search_btn:active{
+    transform: translateY(2px);
+}
+
+.search_icon{
+    font-size: 25px;
+    color: #999;
+}
+
+/* =========================================================== */
+.main2{
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(220, 218, 233, 0.7);
+    border-radius: 50px;
+} 
+.search2{
+    text-align: center;
+}
+.search3{
+    margin-top: 5%;
+    text-align: center;
+}
+.search4{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.search5{
+    margin-top: 5%;
+    text-align: center;
+}
+.search2>img{
+    width: 20%;
+    padding: 20px;
+}
+.search3>img{
+
+    width: 20%;
+    padding: 20px;
+
+}
+.search4>img{
+    width: 20%;
+    padding: 20px;
+}
+.search5>img{
+    
+    width: 20%;
+    padding: 20px;
+
+}
+/* ===================================== */
+
+
+#f_title{
+    font-size: 300%;
+    text-align: left;
+    margin-left: 5%;
+    color: white;
+    padding-top: 5%;
+    -webkit-text-stroke: 1px rgb(67, 113, 197);
+    font-family: 'Black Han Sans', sans-serif;
+}
+#f_sub1{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 250%;
+    color: white;
+    -webkit-text-stroke: 2px #666;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+
+#f_sub2{
+    margin-top: 00px;
+    text-align: left;
+    margin-left: 5%;
+    font-size: 250%;
+    color: white;
+    -webkit-text-stroke: 2px #666;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#f_sub3{
+    text-align: left;
+    margin-left: 5%;
+    font-size: 250%;
+    color: white;
+    -webkit-text-stroke: 2px #666;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+#f_sub4{
+
+    text-align: left;
+    margin-left: 5%;
+    font-size: 250%;
+    color: white;
+    -webkit-text-stroke: 2px #666;
+    font-family: 'Black Han Sans', sans-serif;
+}
+/* 바디끝 */
+/* ========================================================================= */
+/* footer */
+footer{
+    opacity: 0.9;
+    z-index: 100;
+    position: fixed;
+    left: 0px;
+    bottom: 30px;
+    width: 10%;
+    height: auto;
+    color: white;
+    margin-left: 90%;
+    background-color: #2f5294;
+    padding: 10px;
+    white-space: nowrap;
+}
+footer i{
+    width: 50px;
+    height: 50px;
+}
+/* footer 끝 */

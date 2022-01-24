@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.head {
+	position: relative;
+	z-index: 10000;
+	height: 15vh;
+	width: 100%;
+
+	/* +이미지 배너 추가 가능 */
+
+	/* background: url("../images/background.jpg");
+    background-size: cover;
+	background-position: center; */
+}
+header {
+	display: flex;
+	/* padding: 25px; */
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	transition: 500ms;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.head nav {
+    margin: 0px auto;
+}
+
+
+.head nav ul {
+    display: inline-block;
+	white-space: nowrap;
+}
+.head nav ul li{
+    display: inline-block;
+}
+nav ul li #a{
+    margin: 0 50px;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li #a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    transition: width 0.3s;
+}
+nav ul li #a:hover::after{
+    width: 70%;
+}
+
+.logo {
+    margin: 0 100px;
+	flex: 1;
+	font-size: 100px;
+	font-family: sans-serif;
+    text-align: center;
+	color: #fff;
+    text-decoration: none;
+}
+
+.bgc {
+	background: #626262;
+	padding: 10px;
+}
+.bgc .logo {
+	font-size: 60px;
+	color: black; 
+}
+.bgc nav #a {
+	color: #222;
+}
+
+.bgc header #a{
+	color: #222;
+}
+
+.page h1 {
+	padding: 30px;
+	font-size: 40px;
+}
+.page p {
+	padding: 20px;
+	line-height: 1.8em;
+	font-size: 30px;
+}
+@media (max-width: 769px){
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	nav {
+		padding: 15px;
+		margin: 0px;
+	}
+}

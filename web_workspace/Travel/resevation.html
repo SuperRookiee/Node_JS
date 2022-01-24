@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_reservation</title>
+    <link href="./css/header.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/reservation.css" rel="stylesheet" type="text/css"/>
+    <link href="./css/footer.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="head">
+    	<header>
+	    	<nav>
+                <ul>
+                   <li><a id="a" href="#">예약하기</a></li>
+                   <li><a id="a" href="#">추천 여행지</a></li>
+                   <li><a id="z" href="#" class="logo">Travel</a></li>
+                   <li><a id="a" href="#">상품 패키지</a></li>
+                   <li><a id="a" href="#">장바구니</a></li>
+				   <a class="trigger" id="profile" href="#"><span style="color:white"><i class="fas fa-user-circle fa-4x"></i></span></a>
+                </ul>
+	    		
+	    	</nav>
+    	</header>
+    </section>
+
+    <!-- 팝업 될 레이어 --> 
+    <div class="modal"> 
+        <div class="modal-content"> 
+            <span class="close-button">&times;</span> 
+            <h1 class="title">로그인</h1> 
+            <form action="#post.php" method="POST"> 
+            <label for="login">login</label> 
+            <input type="text" name="ID" placeholder="ID" required="required"> 
+            <label></label> 
+            <input type="text" name="PassWord" placeholder="PassWord" required="required"> 
+            <input type="submit" id="submit" value="로그인"> 
+            <input type="button" id="cancel" value="취소"> 
+            </form> 
+        </div> 
+    </div>
+
+    <script type="text/javascript"> 
+        var modal = document.querySelector(".modal"); 
+        var trigger = document.querySelector(".trigger"); 
+        var closeButton = document.querySelector(".close-button"); 
+        var cancelButton = document.querySelector("#cancel");
+
+    //console.log(modal);
+
+    function toggleModal() { 
+            modal.classList.toggle("show-modal"); 
+        }
+
+    function windowOnClick(event) { 
+            if (event.target === modal) { 
+                toggleModal(); 
+            } 
+        }
+
+    trigger.addEventListener("click", toggleModal); 
+        closeButton.addEventListener("click", toggleModal); 
+        cancel.addEventListener("click", toggleModal); 
+        window.addEventListener("click", windowOnClick); 
+    </script>
+
+
+
+    <section class="page">
+        <main>
+            <ul id="cards">
+                <li class="card" id="card_1">
+                    <div class="card__content">
+                        <div>
+                            <h2>Card One</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_2">
+                    <div class="card__content">
+                        <div>
+                            <h2>Card Two</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_3">
+                    <div class="card__content">
+                        <div>
+                            <h2>Card Three</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_4">
+                    <div class="card__content">
+                        <div>
+                            <h2>Card Four</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </section>
+
+
+
+    
+</body>
+</html>

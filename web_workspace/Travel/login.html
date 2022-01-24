@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link href="./css/login.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body> 
+
+    <!-- 버튼 --> 
+    <button class="trigger">로그인</button> 
+    <!-- 버튼 --> 
+
+    <!-- 팝업 될 레이어 --> 
+    <div class="modal"> 
+        <div class="modal-content"> 
+            <span class="close-button">&times;</span> 
+            <h1 class="title">로그인</h1> 
+            <form action="#post.php" method="POST"> 
+              <label for="email">login</label> 
+              <input type="text" name="ID" placeholder="ID" required="required"> 
+              <label></label> 
+              <input type="text" name="PassWord" placeholder="PassWord" required="required"> 
+              <input type="submit" id="submit" value="로그인"> 
+              <input type="button" id="cancel" value="취소"> 
+            </form> 
+        </div> 
+    </div>
+
+   <script type="text/javascript"> 
+        var modal = document.querySelector(".modal"); 
+        var trigger = document.querySelector(".trigger"); 
+        var closeButton = document.querySelector(".close-button"); 
+        var cancelButton = document.querySelector("#cancel");
+
+       //console.log(modal);
+
+       function toggleModal() { 
+            modal.classList.toggle("show-modal"); 
+        }
+
+       function windowOnClick(event) { 
+            if (event.target === modal) { 
+                toggleModal(); 
+            } 
+        }
+
+        trigger.addEventListener("click", toggleModal); 
+        closeButton.addEventListener("click", toggleModal); 
+        cancel.addEventListener("click", toggleModal); 
+        window.addEventListener("click", windowOnClick); 
+    </script>
+
+</body> 
+</html>

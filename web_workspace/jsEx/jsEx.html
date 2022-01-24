@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        alert('haed')
+    </script> -->
+    <!-- <script src="./extern/externEx.js"></script> -->
+    <!-- <script src="./extern/externEx1.js"></script>
+    <script src="./extern/externEx2.js"></script> -->
+
+    <!-- <script src="./extern/nestedEx1.js"></script> -->
+    <style>
+        *{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- <button type="button" onclick="alert('버튼을 눌렀음')";>버튼을 눌러봐</button> -->
+    <!-- <script>
+        alert('body')
+    </script> -->
+    <!-- <script>
+        var num=0;
+        document.write("head 태그 내 실행 순서: "+num+"<br>");
+    </script>
+    <script>
+        var num=1;
+        document.write("head 태그 내 실행 순서: "+num+"<br>");
+    </script> -->
+    <!-- <button type="button" onclick="alert('외부 자바스크립트 파일')">버튼 클릭</button> -->
+    <!-- <script>
+        document.write("<div style='color:blue; font-size:20px;'>내부 자바스크립트 파일</div>");
+    </script> -->
+    
+    <script>
+        var num;
+        var obj=null;
+        document.write(typeof 100 +"<br>");
+        document.write(typeof 10.5 +"<br>");
+        document.write(typeof "코난" +"<br>");
+        document.write(typeof true +"<br>");
+        document.write(typeof [1,2,3] +"<br>");
+        document.write(typeof {name:'코난', age:10} +"<br>");
+        document.write(typeof num +"<br>");
+        document.write(typeof obj +"<br>");
+        console.log("hellow javascript!");
+        console.log("hellow javascript!");
+        console.log('안녕하세요'.length);
+        console.log(''.length);
+        console.log(`표현식 1+2의 값은 ${1+2} 입니다...!`)
+        console.log(1=="1")
+        console.log(false=="0")
+        console.log(""==[])
+        console.log(0==[])
+
+        // const input=confirm('수락하나요?');
+        // alert(input);
+        console.log(Number("100"))
+        console.log(typeof(Number("100")))
+        console.log("number")
+        console.log(Number("asd"))
+
+        // const date = new Date()
+        // const hour = date.getHours()
+        // if(hour<12){
+        //     alert('오전입니다.');
+        // }
+        // if(hour>=12){
+        //     alert('오후입니다.');
+        // }
+
+        // const input = prompt('숫자를 입력하세요');
+        // if(input>0){
+        //     alert('양수입니다');
+        // }
+        // else if(input==0){
+        //     alert('0입니다');
+        // }
+        // else{1
+        //     1
+        //     alert('음수입니다.');
+        // }
+
+        // const input = Number(prompt('숫자를 입력하세요','숫자'));
+        // switch(input % 2){
+        //     case 0:
+        //         alert('짝수입니다.')
+        //         break
+        //     case 1:
+        //         alert('홀수입니다.')
+        //         break
+        //     default:
+        //         alert('숫자가 아닙니다.')
+        //         break
+        // }
+
+        // const input = prompt('태어난 해를 입력하세요');
+        // switch((input-3) % 12){
+        //     case 1:
+        //         alert(input+'년에 태어난 경우 쥐띠입니다.')
+        //         break;
+        //     case 2:
+        //         alert(input+'년에 태어난 경우 소띠입니다.')
+        //         break;
+        //     case 3:
+        //         alert(input+'년에 태어난 경우 호랑이띠입니다.')
+        //         break;
+        //     case 4:
+        //         alert(input+'년에 태어난 경우 토끼띠입니다.')
+        //         break;
+        //     case 5:
+        //         alert(input+'년에 태어난 경우 용띠입니다.')
+        //         break;
+        //     case 6:
+        //         alert(input+'년에 태어난 경우 뱀띠입니다.')
+        //         break;
+        //     case 7:
+        //         alert(input+'년에 태어난 경우 말띠입니다.')
+        //         break;
+        //     case 8:
+        //         alert(input+'년에 태어난 경우 양띠입니다.')
+        //         break;
+        //     case 9:
+        //         alert(input+'년에 태어난 경우 원숭이띠입니다.')
+        //         break;
+        //     case 10:
+        //         alert(input+'년에 태어난 경우 닭띠입니다.')
+        //         break;
+        //     case 11:
+        //         alert(input+'년에 태어난 경우 개띠입니다.')
+        //         break;
+        //     case 0:
+        //         alert(input+'년에 태어난 경우 돼지띠입니다.')
+        //         break;
+        // }
+        
+        // const todos = ['장보기', '업무 메일 확인하기', '홈트'];
+        // for(const i in todos){
+        //     console.log(`${i}번째 할일 : ${todos[i]}`)
+        // }
+
+        // for(const todo of todos){
+        //     console.log(`오늘의 할일 : ${todo}`)
+        // }
+        // for(let i=0; i<5;i++){
+        //     console.log(`${i}번째 반복입니다`)
+        // }
+        // for(let i=0; i<todos.length; i++){
+        //     console.log(`${i}번째 할일 : ${todos[i]}`)
+        // }
+
+        // let i=0;
+        // while(confirm('계속 진행하시겠습니까?')){
+        //     //사용자가 [확인] 버튼을 클릭하면 true가 되어 계속 반복
+        //     alert(`${i}번째 반복입니다.`);
+        //     i=i+1;
+        // }
+        
+        // let i=0;
+        // const array=[1,2,3,4,5];
+        // while(i<array.length){
+        //     console.log(`${i}: ${array[i]}`);
+        //     i++;
+        // }
+
+        // for(let i=0; true; i++){
+        //     const isContinue = confirm('계속 하시겠습니까?');
+        //     if(!isContinue){
+        //         break;
+        //     }
+        // }
+        // alert('프로그램 종료');
+
+        let sum=0;
+        for(let i=1; i<=10; i++){
+            if(i%2===1){
+                continue;
+            }
+            sum +=1;
+        }
+        alert(sum);
+
+    </script>
+    
+
+</body>
+</html>

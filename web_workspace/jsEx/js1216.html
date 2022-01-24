@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div.item:nth-child(1){background: blueviolet;}
+        div.item:nth-child(2){background: pink;}
+        div.item:nth-child(3){background: burlywood;} */
+
+        /* *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background: black;
+            margin: 5px;
+        } */
+
+        .highlight-0{background: yellow;}
+        .highlight-1{background: orange;}
+        .highlight-2{background: blue;}
+        .highlight-3{background: green;}
+
+    </style>
+    <script src="jquery/jquery-3.6.0.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- <script src="jquery/jquery.lightbox.js"></script> -->
+</head>
+<body>
+<!-- <div data-role="slider" data-width="500" data-height="300"> 
+    <div class="container">
+        <div class="item">
+            <h1>Lorem ipsum, dolor sit amet</h1>
+            <p>Lorem ipsum, dolor sit amet, consectetur</p>
+        </div>
+        <div class="item">
+            <h1>Lorem ipsum, dolor sit amet</h1>
+            <p>Lorem ipsum, dolor sit amet, consectetur</p>
+        </div>
+        <div class="item">
+            <h1>Lorem ipsum, dolor sit amet</h1>
+            <p>Lorem ipsum, dolor sit amet, consectetur</p>
+        </div>
+    </div>
+</div>
+<button id="left-button"> ← </button>
+<button id="right-button"> → </button>
+
+<script>
+    $(document).ready(function(){
+        var width = $('[data-role="slider"]').attr('data-width');
+        var height = $('[data-role="slider"]').attr('data-height');
+        var count = $('[data-role="slider"] div.item').length;
+
+        $('[data-role="slider"]').css({
+            position: 'relative',
+            overflow: 'hidden',
+            width: width,
+            height: height
+        }).find('.container').css({
+            position: 'absolute',
+            width: count*width,
+            overflow: 'hidden'
+        }).find('.item').css({
+            width: width,
+            height: height,
+            float: 'left'
+        });
+
+        var currentPage=0;
+        var changePage = function(){
+            $('[data-role="slider"] > .container').animate({
+                left: -currentPage*width},500);
+        };
+        $('#left-button').click(function(){
+            if(currentPage > 0 ){
+                currentPage=currentPage-1;
+                changePage();
+            }
+        });
+        $('#right-button').click(function(){
+            if(currentPage < count-1 ){
+                currentPage=currentPage+1;
+                changePage();
+            }
+        });
+    });
+</script> -->
+
+<div class="slider">
+    <div class="images">
+        <img class="image" src="http://placeimg.com/460/300/animal"/>
+        <img class="image" src="http://placeimg.com/460/300/people"/>
+        <img class="image" src="http://placeimg.com/460/300/nature"/>
+        <img class="image" src="http://placeimg.com/460/300/tech"/>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        var width = 460;
+        var height = 300;
+        var current = 0;
+        var moveTo = function(){
+            $('.images').stop().animate({
+                left: - current * width
+            }, 1000);
+        };
+        var imageLength = $('.slider').find('.image').length;
+        for(var i=0; i< imageLength; i++){
+            $('<button></button>')
+            .attr('data-position',i)
+            .text(i)
+            .click(function(){
+                current = $(this).attr('data-position');
+                moveTo;
+            }).insertBefore('.slider');
+        }
+        $('.slider').css({
+            position: 'relative',
+            overflow: 'hidden',
+            width: width,
+            height: height
+        });
+        $('.images').css({
+            position: 'absolute',
+            width: width*imageLength
+        });
+        $('.image').css({
+            margin: 0,
+            padding: 0,
+            width: width,
+            height: height,
+            display: 'block',
+            float: 'left'
+        });
+        setInterval(function() {
+            current = current+1;
+            current = current % imageLength;
+            moveTo();
+        }, 3000);
+    }); 
+</script>
+
+<!-- <script>
+    $(document).ready(function(){
+        $('a.light').lightBox();
+    });
+</script>
+<a class="light" href="../images/conan.jpg">LightBox</a>
+<a class="light" href="../images/coffeshop.png">LightBox</a>
+<a class="light" href="../images/아메리카노.png">LightBox</a> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        for(var i=0; i<100; i++){
+            $('<div></div>').addClass('box').css({
+                width: 100,
+                height: Math.floor(Math.random()*100)+50
+            }).appendTo('body');
+        }
+        $('body').masonry({
+            columnWidth: 110
+        });
+    })
+</script> -->
+
+<!-- <div>
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Strawberry</li>
+        <li>Banana</li>
+    </ul>
+</div> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        $('body>*').css('color','red');
+    });
+</script> -->
+<!-- <script>
+    $(document).ready(function(){
+        $('body*').css('color','red');
+    });
+</script> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        $('input[type="text"]').val("hello..!");
+    });
+</script>
+
+<input type="text"/><br>
+<input type="password"/> 
+<input type="radio"/><input type="checkbox"/> <br>
+<input type="file"/> -->
+
+<!-- <select>
+    <option>Apple</option>
+    <option>Orange</option>
+    <option>Strawberry</option>
+    <option>Banana</option>
+</select>
+
+<script>
+    $(document).ready(function(){
+      setTimeout(function() {
+          var value = $('select > option:selected').val();
+          alert(value);
+      }, 5000);
+    });
+</script> -->
+
+<!-- <table>
+    <tr><th>이름</th><th>혈액형</th><th>주소</th></tr>
+    <tr><th>코난</th><th>A형</th><th>미란이네</th></tr>
+    <tr><th>장미</th><th>B형</th><th>브라운박사네</th></tr>
+    <tr><th>미란</th><th>AB형</th><th>미란이네</th></tr>
+    <tr><th>키드</th><th>O형</th><th>모름</th></tr>
+</table> -->
+
+<!-- <script>
+    $(document).ready(function(){
+      $('tr:odd').css('background', '#f9f9f9');
+      $('tr:even').css('background', '#9f9f9f');
+      $('tr:first').css('background', '#000000').css('color', '#ffffff');
+    });
+</script> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        $('tr:eq(0)').css('background', '#000000').css('color', 'white');
+        $('tr:nth-child(3n+1)').css('background', '#565656');
+        $('tr:nth-child(3n+2)').css('background', '#a9a9a9');
+        $('tr:nth-child(3n)').css('background', '#f9f9f9');
+    });
+</script> -->
+
+<!-- <script>
+    $(document).ready(function(){
+        var array=[
+            {name:'naver', link:'http://www.naver.com'},
+            {name:'daum', link:'http://www.daum.net'},
+            {name:'google', link:'http://www.google.com'}
+        ];
+        $.each(array, function(index, item) {
+            var output='';
+            output +='<a href="'+ item.link+'">';
+            output +='<h1>'+ item.name+'<h1>';
+            output +='</a>';
+            document.body.innerHTML += output;
+        });
+    });
+</script> -->
+
+<!-- <h1>item-0</h1>
+<h1>item-1</h1>
+<h1>item-2</h1>
+<h1>item-3</h1>
+
+<script>
+    $(document).ready(function(){
+        $('h1').each(function(index, item) {
+            $(item).addClass('highlight-'+index);
+        })
+    });
+</script> -->
+
+<!-- <script>
+    function callThreeTimes(callback){
+        for(var i=0; i<3; i++){
+            callback();
+        }
+    }
+    var callback = function(){
+        alert('함수 호출');
+    }
+    callThreeTimes(callback);
+</script> -->
+
+<!-- <script>
+    var obj={
+        name:'코난',
+        age:10
+    };
+    alert(JSON.stringify(obj));
+
+    var objCopy = JSON.parse(JSON.stringify(obj));
+    alert(objCopy.name+":"+objCopy.age);
+</script> -->
+
+<!-- <script>
+    function checkForm(){
+        alert("이름은 "+ document.frm.name.value+"입니다");
+    }
+</script>
+
+<form name='frm'>
+    <p>이름: <input type="text" name="name">
+    <input type="submit" value="전송" onclick="checkForm()">
+    </p>
+</form> -->
+
+<!-- <script>
+    function checkLogin(){
+        var form = document.loginFrm;
+        if(form.userId.value ==""){
+            alert("아이디를 입력해주세요.");
+            form.userId.focus();
+            return false;
+        }
+        else if(form.userPwd.value==""){
+            alert("비밀번호를 입력해주세요");
+            form.userPwd.focus();
+            return false;
+        }
+        form.submit();
+    }
+    
+    
+
+</script>
+
+<form name="loginFrm" action="member/resultMember.jsp" method="post">
+    <p>아이디: <input type="text" name="userId"></p>
+    <p>비밀번호: <input type="password" name="userPwd"></p>
+    <p><input type="button" value="전송" onclick="checkLogin()"></p>
+</form> -->
+
+
+<!-- <script>
+    function checkForm(){
+        if(document.frm.name.value.length < 6 || document.frm.name.value.length>12){
+            alert("이름을 6~12자 이내로 입력하세요.");
+            document.frm.name.select();
+        }
+    }
+</script>
+
+<form name="frm" action="member/resultMember.jsp" method="post">
+    <p>이름: <input type="text" name="name"></p>
+    <p><input type="button" value="로그인" onclick="checkForm()"></p>
+</form> -->
+
+<!-- <script>
+    function Login(){
+        if(document.loginFrm.userId.value.length < 4 || document.loginFrm.userId.value.length>12){
+            alert("아이디는 4~12자 이내로 입력 가능");
+            document.loginFrm.userId.select();
+        }
+        else if(document.loginFrm.userPwd.value.length<8){
+            alert("비밀번호는 8자 이상으로 입력 가능");
+            document.loginFrm.userPwd.select();
+        }
+    }
+</script>
+
+<form name="loginFrm" action="member/resultMember.jsp" method="post">
+    <p>아이디: <input type="text" name="userId"></p>
+    <p>비밀번호: <input type="password" name="userPwd"></p>
+    <p><input type="button" value="로그인" onclick="Login();"></p>
+</form> -->
+
+
+<!-- <script>
+    function checkForm(){
+        if(!isNaN(document.frm.name.value.substr(0,1))){
+            alert("이름은 숫자로 시작할 수 없음!");
+            document.frm.name.select();
+        }
+    }
+</script>
+
+<form name="frm" action="member/resultMember.jsp" method="post">
+    <p>이름: <input type="text" name="name"></p>
+    <p><input type="button" value="로그인" onclick="checkForm()"></p>
+</form> -->
+
+<!-- <script>
+    function checkLogin() {
+        var form = document.loginFrm;
+        for (i = 0; i < form.userId.value.length; i++) {
+            var ch = form.userId.value.charAt(i);
+            if ((ch < 'a' || ch > 'z') && (ch > 'A' || ch < 'Z') && (ch > '0' || ch < '9')) {
+                alert('아이디는 영문 소문자만 입력 가능');
+                form.userId.select();
+                return;
+            }
+            if (isNaN(form.userPwd.value)) {
+                alert('비밀번호는 숫자만 입력 가능');
+                form.userPwd.select();
+                return;
+            }
+        }
+        form.submit();
+    }
+</script>
+
+<form name="loginFrm" action="nan2.html">
+    아이디: <input type="text" name="userId"><p>
+    비밀번호: <input type="password" name="userPwd"><p>
+    <input type="submit" value="전송" onclick="checkLogin()">
+</form> -->
+
+
+<!-- <script>
+    function checkForm(){
+        var regExp = /Java/i; // var regExp = new RegExp('java','i')
+        var str = document.frm.title.value;
+        var result = regExp.exec(str);
+        alert(result[0]);
+    }
+</script> -->
+
+<!-- <form name="frm" action="#">
+    제목: <input type="text" name="title"><p>
+    <input type="submit" value="전송" onclick="checkForm()">
+</form> -->
+
+<!-- <script>
+    function checkForm(){
+        var regExp = /script/;
+        var string = 'Javascript jquery Ajax';
+        var output = string.split(regExp);
+        alert(output);
+    }
+</script> -->
+
+<!-- <script>
+    function checkForm(){
+        var regExp = /a/;
+        var string = 'Javascript jquery Ajax';
+        var output = string.replace(regExp,'+$&+');
+        alert(output);
+    }
+</script> -->
+
+<!-- <script>
+    function checkForm(){
+        var regExp = /(a)(v)(a)/;
+        var string = 'Javascript jquery Ajax';
+        var output = string.replace(regExp,'+$1=$2=$3+');
+        alert(output);
+    }
+</script> -->
+
+<!-- <script>
+    function checkForm(){
+        var regExp = /^j/igm;
+        var string = 'Javascript\njquery\nAjax';
+        var output = string.replace(regExp,'+$&+');
+        alert(output);
+    }
+</script> -->
+
+<!-- <script>
+    function checkForm(){
+        var str = document.frm.name.value;
+        var regExp = /^[a-z|A-Z|ㄱ-ㅎ|ㅏ-ㅣ|가-힝]/
+        if(! regExp.test(str)){
+            alert("이름을 숫자로 시작할 수 없음!");
+            return;
+        }
+    }
+</script>
+<form name="frm" action="#">
+    이름: <input type="text" name="name"><p>
+    <input type="submit" value="전송" onclick="checkForm()">
+</form>
+
+<script>
+    var output='';
+    for(var key in window){
+        output +='😊'+key+':'+window[key]+'\n';
+    }
+    alert(output);
+</script> -->
+
+<!-- <script>
+    var child = window.open(",",'width=300, height=200');
+    child.document.write('<h1> From Parent Window </h1>');
+</script> -->
+
+<!-- <script>
+    var child = window.open('','','width=300, height=200');
+    child.moveTo(0,0);
+    setInterval(function(){
+        child.moveBy(10,10);
+    },1000);
+</script> -->
+
+<!-- <script>
+    var output='';
+    for(var key in screen){
+        output += '❤'+key +':'+screen[key] + '\n';
+    }
+    alert(output);
+</script> -->
+
+<!-- <script>
+    var child = window.open('','','width=300, height=200');
+    var width = screen.width; var height= screen.height;
+    child.moveTo(0,0);
+    child.resizeTo(width,height);
+    setInterval(function(){
+        child.resizeTo(-20,-20);
+        child.moveBy(10,10);
+    },1000);
+</script> -->
+
+</body>
+</html>

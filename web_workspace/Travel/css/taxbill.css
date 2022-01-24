@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.taxbill, .result{
+    text-align: center;
+    padding: 50px 22%;  
+}
+#smallTitle{
+    text-align: right;
+    white-space: nowrap;
+    font-size: 60px;
+    color: gray;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+.taxbill .stack div{
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0 10px;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+}
+.taxbill .stack h6{
+    text-align: left;
+    font-size: 30px;
+    color: rgb(47,82,148);
+}
+.taxbill .stack h2{
+    margin-left: 5px;
+    text-align: left;
+    font-size: 40px;
+}
+.taxbill .stack #price h2{
+    text-align: right;
+    font-size: 50px;
+}
+
+.stack #check #checkbox{
+    float: right;
+    margin-top: 30px;
+    margin-right: 10px;
+    transform: scale(4);
+}
+
+/* Result */
+#line{
+    height: 4px;
+    background-color: black;
+    position: relative;
+    margin-top: 100px;
+    width: 106%;
+    right: 3%;
+}
+
+.finall{
+    height: auto;
+    background-color: rgba(47,82,148,0.9);
+    padding: 20px 10px;
+    box-shadow: 0 7px 10px 0 rgba(0,0,0,0.3);
+    border-radius: 2;
+}
+
+#f{
+    text-align: left;
+    font-size: 50px;
+    color: white;
+}
+#cost{
+    text-align: right;
+    font-size: 70px;
+}
+
+#orderButton{
+    text-decoration-line: none;
+    border: double white;
+    color: white;
+    font-size: 50px;
+    background-color: rgb(47,82,148);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.3);
+}
+

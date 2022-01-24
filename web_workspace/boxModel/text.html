@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font_airal{font-family: Arial;}
+        .font_roman{font-family: 'Times New Roman';}
+
+        .font_big{font-size: 2em;}
+        .font_italic{font-style: italic;}
+        .font_bold{font-weight: bold;}
+        .font_center{text-align: center;}
+        .font_right{text-align: right;}
+        .button{
+            width: 150px;
+            height: 70px;
+            background-color: #00B0F0;
+            border: 10px solid #FFFFFF;
+            border-radius: 30px;
+            box-shadow: 5px 5px 5px #A9A9A9;
+        }
+        .button>a{
+            display: block;
+            line-height: 70px;
+        }
+
+        td, th{
+            border: 1px solid black;
+        }
+        #tb1{
+            border: 2px solid red;
+            table-layout: auto;
+        }
+        #tb2{
+            border: 3px dotted teal;
+            background-color: yellow;
+            table-layout: fixed;
+        }
+
+        td, th{
+            border: 1px solid red;
+        }
+        #tb1{
+            border: 2px solid green;
+            border-spacing: 10px;     /*상하좌우*/    
+        }
+        #tb2{
+            border: 3px solid maroon;
+            background-color: aqua;
+            border-spacing: 20px 40px;
+            /* 첫번째 값: 좌우, 두번째 값: 상하 */
+        }
+        
+        td, th{
+            border: 2px solid black;
+        }
+        #tb1{
+            border: 3px solid blue;
+            border-collapse: collapse;
+            caption-side: top;
+        }
+        #tb2{
+            border: 3px solid red;
+            border-collapse: collapse;
+            caption-side: bottom;  
+        }
+
+        td, th{
+            border: 1px solid blue;
+        }
+        #tb1{
+            border-collapse: separate;
+            empty-cells: hide;
+        }
+        #tb2{
+            border-collapse: separate;
+            empty-cells: show;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="font_airal">Lorem ipsum</h1>
+    <p class="font_roman">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Etiam malesuada felis id massa adipiscing eget pellentesque ipsum lacinia. In orcimassa, venenatis quis ultrices ac, accumsan vitae nunc. Sed eget pellentesque enim. Maecenas eros risus, hendreit eget lacinia nex, mollis nec velit. Mauris sem mi, molesite sed bibendum eu, blandit et ante.
+    </p>
+
+    <p class="font_big font_italic font_bold font_center">Lorem ipsum dolor amet</p>
+    <p class="font_bold font_right">2021.03.09</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Etiam malesuada felis id massa adipiscing eget pellentesque ipsum lacinia. In orcimassa, venenatis quis ultrices ac, accumsan vitae nunc. Sed eget pellentesque enim. Maecenas eros risus, hendreit eget lacinia nex, mollis nec velit. Mauris sem mi, molesite sed bibendum eu, blandit et ante. pellentesque vel mauris et mauris ornare pharetra. Etiam scelerisque puvinar diam posuere ultrices</p>
+
+    <div class="button">
+        <a href="#" class="font_big font_italic font_bold font_center">Click</a>
+    </div>
+
+    <h2>table layout auto 예제</h2>
+    <table id="tb1">
+        <tr>
+            <th>table layout auto</th>
+            <td>내용 분량에 따라서 자동으로 조절</td>
+        </tr>
+    </table>
+    <h2>table layout fixed 예제</h2>
+    <table id="tb2" width="250px">
+        <tr>
+            <th>table layout fixed</th>
+            <td>내용 분량에 상관없이 고정</td>
+        </tr>
+    </table>
+
+    <table id="tb1">
+        <tr>
+            <th>table border-spacing</th>
+            <td>10px</td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb2" width="350px">
+        <tr>
+            <th>table border-spacing</th>
+            <td>20px 40px</td>
+        </tr>
+    </table>
+
+    <br>
+    
+    <table id="tb1" border="1" width=300px>
+        <tr>
+            <th>국어</th>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>수학</th>
+            <td></td>
+        </tr>
+    </table>
+    <p></p>
+    <table id="tb2" border="1" width=300px>
+        <tr>
+            <th>국어</th>
+            <td>영어</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>수학</th>
+            <td></td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
